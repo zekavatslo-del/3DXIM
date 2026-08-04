@@ -1,10 +1,137 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3DXIM</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #222;
+        }
+
+        header {
+            height: 100vh;
+            background: #111;
+            color: white;
+            display: flex;
+            flex-direction: column;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 7%;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 15px;
+        }
+
+        .hero {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 10%;
+        }
+
+        .hero h1 {
+            font-size: 64px;
+            max-width: 850px;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            font-size: 21px;
+            color: #ccc;
+            max-width: 650px;
+            line-height: 1.6;
+        }
+
+        .hero a {
+            margin-top: 35px;
+            color: white;
+            text-decoration: none;
+            border: 1px solid white;
+            padding: 14px 25px;
+            width: fit-content;
+        }
+
+        section {
+            padding: 100px 10%;
+        }
+
+        section h2 {
+            font-size: 38px;
+            margin-bottom: 30px;
+        }
+
+        section p {
+            max-width: 800px;
+            font-size: 18px;
+            line-height: 1.7;
+            color: #555;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>3DXIM</h1>
-    <p>Our website is under construction.</p>
+
+<header>
+
+    <nav>
+        <div class="logo">3DXIM</div>
+
+        <div>
+            <a href="#about">About</a>
+            <a href="#research">Research</a>
+            <a href="#facilities">Facilities</a>
+            <a href="#team">Team</a>
+            <a href="#publications">Publications</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h1>Seeing materials from the inside.</h1>
+
+        <p>
+            Advanced 3D X-ray and neutron imaging for materials science,
+            engineering and energy research.
+        </p>
+
+        <a href="#about">Discover 3DXIM</a>
+    </div>
+
+</header>
+
+<section id="about">
+    <h2>About 3DXIM</h2>
+
+    <p>
+        3DXIM brings together advanced imaging techniques and quantitative
+        image analysis to investigate the internal structure of materials
+        across multiple length scales.
+    </p>
+</section>
+
 </body>
 </html>

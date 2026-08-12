@@ -13,23 +13,33 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --dark: #111;
+            --light: #f5f5f5;
+            --text: #222;
+            --muted: #666;
+            --border: #ddd;
+            --accent: #2f6f8f;
+        }
+
         body {
             font-family: Arial, sans-serif;
-            color: #222;
-            background: #fff;
+            color: var(--text);
+            background: white;
+            line-height: 1.7;
         }
 
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 30px 7%;
-            background: #111;
+            padding: 24px 7%;
+            background: var(--dark);
             color: white;
         }
 
         .logo {
-            font-size: 28px;
+            font-size: 27px;
             font-weight: bold;
             letter-spacing: 2px;
         }
@@ -37,85 +47,275 @@
         nav a {
             color: white;
             text-decoration: none;
-            margin-left: 30px;
+            margin-left: 28px;
             font-size: 15px;
+        }
+
+        nav a:hover {
+            opacity: 0.7;
         }
 
         .hero {
             padding: 110px 10%;
-            background: #f3f3f3;
+            background: #f0f2f3;
         }
 
         .hero h1 {
             font-size: 58px;
-            margin-bottom: 20px;
+            line-height: 1.1;
+            margin-bottom: 22px;
         }
 
         .hero p {
+            max-width: 800px;
             font-size: 20px;
-            max-width: 750px;
-            line-height: 1.6;
-            color: #555;
+            color: var(--muted);
         }
 
         section {
             padding: 90px 10%;
         }
 
-        section h2 {
-            font-size: 38px;
+        .section-title {
+            font-size: 40px;
+            line-height: 1.15;
             margin-bottom: 20px;
         }
 
-        section p {
+        .section-intro {
             max-width: 850px;
+            color: var(--muted);
             font-size: 18px;
-            line-height: 1.7;
-            color: #555;
+            margin-bottom: 50px;
         }
 
-        .facilities {
+        .subsection-title {
+            font-size: 34px;
+            margin-bottom: 22px;
+        }
+
+        .equipment {
+            margin-bottom: 100px;
+        }
+
+        .equipment-header {
+            margin-bottom: 30px;
+        }
+
+        .equipment-header p {
+            max-width: 900px;
+            color: var(--muted);
+            font-size: 17px;
+        }
+
+        .spec-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 35px 0 45px;
+        }
+
+        .spec {
+            background: white;
+            padding: 22px;
+        }
+
+        .spec strong {
+            display: block;
+            font-size: 15px;
+            margin-bottom: 7px;
+            color: var(--muted);
+            font-weight: normal;
+        }
+
+        .spec span {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin: 35px 0 40px;
+        }
+
+        .image-grid img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .text-columns {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
+            gap: 45px;
+        }
+
+        .text-columns p {
+            color: #555;
+            font-size: 17px;
+        }
+
+        .text-columns h3 {
+            font-size: 21px;
+            margin-bottom: 12px;
+        }
+
+        .modalities {
+            background: var(--light);
+        }
+
+        .modality-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
             margin-top: 45px;
         }
 
-        .facility {
-            border: 1px solid #ddd;
-            padding: 35px;
-            background: #fafafa;
+        .modality {
+            background: white;
+            padding: 28px;
+            border: 1px solid var(--border);
         }
 
-        .facility h3 {
-            font-size: 25px;
+        .modality h3 {
+            font-size: 21px;
+            margin-bottom: 12px;
+        }
+
+        .modality p {
+            color: var(--muted);
+            font-size: 16px;
+        }
+
+        .processing-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .processing-card {
+            border: 1px solid var(--border);
+            padding: 30px;
+        }
+
+        .processing-card h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .processing-card p {
+            color: var(--muted);
+        }
+
+        .software {
+            margin-top: 40px;
+            padding: 35px;
+            background: var(--light);
+        }
+
+        .software h3 {
+            font-size: 24px;
             margin-bottom: 15px;
         }
 
-        footer {
-            padding: 40px 10%;
-            background: #111;
+        .software-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .software-list span {
+            background: white;
+            border: 1px solid var(--border);
+            padding: 10px 15px;
+            font-size: 15px;
+        }
+
+        .support {
+            background: var(--dark);
             color: white;
+        }
+
+        .support p {
+            max-width: 850px;
+            color: #d4d4d4;
+            font-size: 18px;
+        }
+
+        footer {
+            padding: 35px 10%;
+            background: #090909;
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        @media (max-width: 900px) {
+            .spec-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .modality-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .image-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .image-grid img {
+                height: auto;
+                max-height: 420px;
+            }
         }
 
         @media (max-width: 700px) {
             nav {
                 flex-direction: column;
                 align-items: flex-start;
-                gap: 20px;
+                gap: 18px;
             }
 
             nav a {
                 margin-left: 0;
-                margin-right: 20px;
+                margin-right: 18px;
+            }
+
+            .hero {
+                padding: 80px 7%;
             }
 
             .hero h1 {
                 font-size: 42px;
             }
 
-            .facilities {
+            section {
+                padding: 70px 7%;
+            }
+
+            .section-title {
+                font-size: 34px;
+            }
+
+            .subsection-title {
+                font-size: 29px;
+            }
+
+            .spec-grid,
+            .modality-grid,
+            .processing-grid,
+            .text-columns {
                 grid-template-columns: 1fr;
+            }
+
+            .software-list {
+                gap: 8px;
             }
         }
     </style>
@@ -137,67 +337,385 @@
 
     <p>
         Our imaging and data processing facilities provide advanced tools
-        for non-destructive characterization of materials and structures.
+        for non-destructive characterization of materials and structures,
+        from large engineering components to fine-scale microstructures.
     </p>
 </div>
 
-<section>
-    <h2>Imaging Capabilities</h2>
 
-    <p>
-        We combine laboratory X-ray imaging, high-resolution computed
-        tomography and advanced image processing to investigate internal
-        structures across multiple length scales.
+<!-- IMAGING CAPABILITIES -->
+
+<section>
+    <h2 class="section-title">Imaging Capabilities</h2>
+
+    <p class="section-intro">
+        3DXIM provides access to advanced laboratory X-ray computed tomography
+        systems covering a broad range of sample sizes, spatial resolutions,
+        experimental conditions, and acquisition modalities.
     </p>
 
-    <div class="facilities">
 
-        <div class="facility">
-            <h3>Micro-XCT</h3>
+    <!-- EASYTOM -->
+
+    <div class="equipment">
+
+        <div class="equipment-header">
+            <h2 class="subsection-title">EasyTOM XL 160/230 Ultra</h2>
+
             <p>
-                High-resolution laboratory X-ray computed tomography for
-                non-destructive 3D characterization of materials and
-                microstructures.
+                The EasyTOM XL 160/230 Ultra (RX Solutions, France) is a
+                versatile high-performance X-ray CT system equipped with two
+                open X-ray sources: a nanofocus source for high-resolution
+                imaging and a microfocus source for high-energy and high-power
+                applications.
             </p>
         </div>
 
-        <div class="facility">
-            <h3>Laboratory X-ray CT</h3>
+        <div class="spec-grid">
+
+            <div class="spec">
+                <strong>X-ray source voltage</strong>
+                <span>20–230 kV</span>
+            </div>
+
+            <div class="spec">
+                <strong>Maximum power</strong>
+                <span>200 W</span>
+            </div>
+
+            <div class="spec">
+                <strong>Maximum sample weight</strong>
+                <span>80 kg</span>
+            </div>
+
+            <div class="spec">
+                <strong>Maximum spatial resolution</strong>
+                <span>0.4 µm</span>
+            </div>
+
+        </div>
+
+        <div class="image-grid">
+            <img src="EasyTom_1.jpeg" alt="EasyTOM X-ray CT system">
+            <img src="EasyTom_2.jpeg" alt="EasyTOM X-ray sources and detector">
+            <img src="EasyTom_3.jpeg" alt="EasyTOM CT scanner and control station">
+        </div>
+
+        <div class="text-columns">
+
+            <div>
+                <h3>System configuration</h3>
+
+                <p>
+                    The system combines two open X-ray sources with two detectors:
+                    a large-area 16-bit flat-panel detector and a 14-bit CCD camera.
+                    Depending on the configuration, the scanning volume ranges from
+                    sub-millimetre dimensions up to 520 mm in diameter and 650 mm
+                    in height.
+                </p>
+
+                <p style="margin-top: 18px;">
+                    The system accommodates samples up to 80 kg, 730 mm in diameter,
+                    and 940 mm in height. The large walk-in cabinet allows the
+                    integration of different X-ray sources, detectors, and
+                    experimental setups.
+                </p>
+            </div>
+
+            <div>
+                <h3>Advanced experimental capabilities</h3>
+
+                <p>
+                    A Meca500 six-axis robotic arm (Mecademic Robotics, Canada)
+                    enables automated sample handling and positioning, including
+                    complex geometrical configurations.
+                </p>
+
+                <p style="margin-top: 18px;">
+                    The system supports a wide range of in situ and operando
+                    experiments (4DCT), including environmental and mechanical
+                    testing, using dedicated add-on modules. These configurations
+                    allow experiments without restricting sample movement due to
+                    electrical connections or tubing.
+                </p>
+
+                <p style="margin-top: 18px;">
+                    Native X-Act software (RX Solutions) supports advanced
+                    acquisition and reconstruction modalities, including helical CT,
+                    laminography, propagation-based phase-contrast imaging,
+                    mosaic CT, and dynamic CT.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- MICROXCT400 -->
+
+    <div class="equipment">
+
+        <div class="equipment-header">
+            <h2 class="subsection-title">microXCT400 (Xradia)</h2>
+
             <p>
-                X-ray computed tomography for larger samples and a wide
-                range of engineering and scientific applications.
+                The microXCT400 (Xradia) provides high-resolution laboratory X-ray
+                computed tomography for detailed three-dimensional characterization
+                of materials and microstructures.
             </p>
         </div>
 
-        <div class="facility">
-            <h3>Synchrotron Imaging</h3>
+        <div class="spec-grid">
+
+            <div class="spec">
+                <strong>X-ray source</strong>
+                <span>40–150 kV</span>
+            </div>
+
+            <div class="spec">
+                <strong>Maximum power</strong>
+                <span>10 W</span>
+            </div>
+
+            <div class="spec">
+                <strong>Maximum resolution</strong>
+                <span>0.6 µm</span>
+            </div>
+
+            <div class="spec">
+                <strong>Maximum sample weight</strong>
+                <span>Several kg</span>
+            </div>
+
+        </div>
+
+        <div class="image-grid">
+            <!-- Replace these placeholders with your three microXCT400 images -->
+            <div style="background:#e8e8e8; min-height:280px; display:flex; align-items:center; justify-content:center; color:#777;">
+                MicroXCT400 image
+            </div>
+
+            <div style="background:#e8e8e8; min-height:280px; display:flex; align-items:center; justify-content:center; color:#777;">
+                MicroXCT400 image
+            </div>
+
+            <div style="background:#e8e8e8; min-height:280px; display:flex; align-items:center; justify-content:center; color:#777;">
+                MicroXCT400 image
+            </div>
+        </div>
+
+        <div class="text-columns">
+
+            <div>
+                <h3>Flexible field of view and resolution</h3>
+
+                <p>
+                    Interchangeable objectives provide spatial resolutions down to
+                    0.6 µm, depending on the material, sample size, and imaging
+                    configuration.
+                </p>
+
+                <p style="margin-top: 18px;">
+                    Using a macro objective, samples can be imaged over a
+                    17–50 mm field of view with resolutions of approximately
+                    20–50 µm. At 40× magnification, the field of view is
+                    approximately 0.7 mm, with a spatial resolution of around 1 µm.
+                </p>
+            </div>
+
+            <div>
+                <h3>In situ experiments</h3>
+
+                <p>
+                    Multiple imaging configurations allow characterization of
+                    samples larger than 50 mm while retaining detailed information
+                    at the microscale.
+                </p>
+
+                <p style="margin-top: 18px;">
+                    The microXCT400 can also be combined with an environmental
+                    chamber for controlled in situ experiments between −20 and
+                    140 °C, together with tensile or compressive loads of up to
+                    500 N. This enables investigation of structural and
+                    microstructural changes under controlled environmental and
+                    mechanical conditions.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- MODALITIES -->
+
+<section class="modalities">
+
+    <h2 class="section-title">Modalities</h2>
+
+    <p class="section-intro">
+        Our X-ray CT systems support different acquisition and imaging
+        approaches, enabling the visualization and quantitative analysis of
+        structures under a wide range of experimental conditions.
+    </p>
+
+    <div class="modality-grid">
+
+        <div class="modality">
+            <h3>Conventional CT</h3>
             <p>
-                Access to advanced synchrotron X-ray imaging techniques
-                for high-resolution and phase-sensitive measurements.
+                Three-dimensional X-ray attenuation imaging for non-destructive
+                characterization of internal structures and material phases.
             </p>
         </div>
 
-        <div class="facility">
-            <h3>Image Processing & Analysis</h3>
+        <div class="modality">
+            <h3>Phase-Contrast CT</h3>
             <p>
-                Advanced segmentation, quantitative image analysis and
-                3D characterization of complex microstructures.
+                Enhanced sensitivity to interfaces and low-density features
+                using propagation-based phase-contrast imaging.
+            </p>
+        </div>
+
+        <div class="modality">
+            <h3>Helical CT</h3>
+            <p>
+                Continuous helical acquisition for imaging extended samples
+                and volumes beyond conventional field-of-view limitations.
+            </p>
+        </div>
+
+        <div class="modality">
+            <h3>Laminography</h3>
+            <p>
+                Imaging of flat, plate-like, or laterally extended samples where
+                conventional CT geometries are not optimal.
+            </p>
+        </div>
+
+        <div class="modality">
+            <h3>Mosaic CT</h3>
+            <p>
+                Combining multiple adjacent scans to characterize samples larger
+                than the available detector field of view.
+            </p>
+        </div>
+
+        <div class="modality">
+            <h3>Dynamic & 4D CT</h3>
+            <p>
+                Time-resolved imaging for studying structural evolution during
+                mechanical, thermal, environmental, or other in situ experiments.
             </p>
         </div>
 
     </div>
+
 </section>
+
+
+<!-- IMAGE PROCESSING -->
 
 <section>
-    <h2>Research Support</h2>
+
+    <h2 class="section-title">Image Processing &amp; Analysis</h2>
+
+    <p class="section-intro">
+        Imaging is complemented by advanced reconstruction, processing,
+        segmentation, visualization, and quantitative analysis workflows.
+        Our facilities support the transformation of large tomographic datasets
+        into quantitative three-dimensional information.
+    </p>
+
+    <div class="processing-grid">
+
+        <div class="processing-card">
+            <h3>Reconstruction</h3>
+            <p>
+                Reconstruction of tomographic datasets using advanced
+                analytical and iterative approaches, including optimization
+                of acquisition and reconstruction parameters.
+            </p>
+        </div>
+
+        <div class="processing-card">
+            <h3>Segmentation</h3>
+            <p>
+                Manual, semi-automatic, and machine-learning-based segmentation
+                of complex multiphase materials and microstructures.
+            </p>
+        </div>
+
+        <div class="processing-card">
+            <h3>Quantitative Analysis</h3>
+            <p>
+                Quantification of porosity, pore structure, particle morphology,
+                connectivity, interfaces, dimensions, and other structural
+                descriptors.
+            </p>
+        </div>
+
+        <div class="processing-card">
+            <h3>3D Visualization</h3>
+            <p>
+                Interactive visualization and interpretation of reconstructed
+                three-dimensional datasets for scientific analysis and
+                communication.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="software">
+
+        <h3>Software &amp; Computational Resources</h3>
+
+        <p>
+            Our workflows combine specialized commercial and open-source
+            software for image reconstruction, processing, segmentation,
+            visualization, and quantitative analysis.
+        </p>
+
+        <div class="software-list">
+            <span>Dragonfly</span>
+            <span>ImageJ / Fiji</span>
+            <span>ASTRA Toolbox</span>
+            <span>TomoPy</span>
+            <span>PyPore3D</span>
+            <span>Ilastik</span>
+            <span>STP</span>
+            <span>Other custom Python workflows</span>
+        </div>
+
+        <p style="margin-top: 25px;">
+            The laboratory is supported by computational resources for the
+            processing of large volumetric datasets, high-resolution
+            reconstructions, segmentation, and quantitative 3D analysis.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- SUPPORT -->
+
+<section class="support">
+
+    <h2 class="section-title">Research Support</h2>
 
     <p>
-        Our imaging and data processing facilities at ZAG are available
-        to support your scientific work, from experimental design and
-        image acquisition to reconstruction, segmentation and quantitative
-        analysis.
+        Our imaging and data processing facilities at ZAG are available to
+        support your scientific work, from experimental design and image
+        acquisition to reconstruction, segmentation, visualization, and
+        quantitative analysis.
     </p>
+
 </section>
+
 
 <footer>
     3DXIM — Advanced X-ray Imaging

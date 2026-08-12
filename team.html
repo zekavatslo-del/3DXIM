@@ -116,9 +116,28 @@
         }
 
         .member-info p {
-            color: #666;
-            font-size: 15px;
-        }
+    color: #666;
+    font-size: 15px;
+}
+
+.member-details {
+    display: none;
+    margin-top: 12px;
+}
+
+.member.expanded .member-details {
+    display: block;
+}
+
+.read-more {
+    margin-top: 15px;
+    padding: 0;
+    border: none;
+    background: none;
+    color: #2f6f8f;
+    font-size: 14px;
+    cursor: pointer;
+}
 
         .member-links {
             margin-top: 18px;
@@ -237,15 +256,17 @@
 <div class="member">
     <img src="Zekavat.jpeg" alt="Dr. Amir Reza Zekavat" class="member-photo">
 
-    <div class="member-info">
-        <h3>Amir Reza Zekavat</h3>
-        <div class="position">Postdoctoral Researcher</div>
+<div class="member-info">
+    <h3>Amir Reza Zekavat</h3>
+    <div class="position">Postdoctoral Researcher</div>
 
+    <div class="member-details">
         <p>
-            Amir is an X-ray imaging engineer working at the Department of Materials, at Slovenian National
-            Building and Civil Engineering Institute (ZAG), since May 2025. After completing a master's degree in
-            mechanical engineering in Sweden in 2013, he completed his PhD
-            studies at Örebro University, Sweden, in 2019.
+            Amir is an X-ray imaging engineer working at the Department of Materials,
+            at Slovenian National Building and Civil Engineering Institute (ZAG),
+            since May 2025. After completing a master's degree in mechanical
+            engineering in Sweden in 2013, he completed his PhD studies at
+            Örebro University, Sweden, in 2019.
         </p>
 
         <p style="margin-top: 15px;">
@@ -259,42 +280,32 @@
             state-of-the-art X-ray phase-contrast imaging (XPCI), including CT
             scanning, reconstruction, and analysis of 3D CT datasets.
         </p>
+    </div>
 
-        <div class="member-links">
-            <a href="#">Profile</a>
-            <a href="#">Google Scholar</a>
-        </div>
+    <button class="read-more" onclick="toggleBio(this)">Read more</button>
+
+    <div class="member-links">
+        <a href="#">Profile</a>
+        <a href="#">Google Scholar</a>
     </div>
 </div>
-
-<div class="member">
-    <img src="Ekaterina.jpeg" alt="Ekaterina" class="member-photo">
-
-    <div class="member-info">
-        <h3>Ekaterina</h3>
-        <div class="position">PhD Student</div>
-
-        <p>
-            Ekaterina is a PhD student with a background in archaeological sciences,
-            specializing in the scientific study and conservation of cultural heritage
-            materials. Her current research focuses on the optimization and
-            characterization of sustainable materials for cultural heritage
-            conservation, particularly for injection and additive manufacturing
-            applications. She uses X-ray computed tomography as a non-destructive,
-            quantitative technique to investigate internal structure, porosity,
-            cracking, and material behaviour. Her research interests include
-            archaeological and heritage materials, advanced X-ray characterization,
-            3D imaging, sustainable conservation, and additive manufacturing for
-            the restoration of cultural heritage objects.
-        </p>
-
-        <div class="member-links">
-            <a href="#">Profile</a>
-            <a href="#">Google Scholar</a>
-        </div>
-    </div>
+<div class="member-details">
+    <p>
+        Ekaterina is a PhD student with a background in archaeological sciences,
+        specializing in the scientific study and conservation of cultural heritage
+        materials. Her current research focuses on the optimization and
+        characterization of sustainable materials for cultural heritage
+        conservation, particularly for injection and additive manufacturing
+        applications. She uses X-ray computed tomography as a non-destructive,
+        quantitative technique to investigate internal structure, porosity,
+        cracking, and material behaviour. Her research interests include
+        archaeological and heritage materials, advanced X-ray characterization,
+        3D imaging, sustainable conservation, and additive manufacturing for
+        the restoration of cultural heritage objects.
+    </p>
 </div>
 
+<button class="read-more" onclick="toggleBio(this)">Read more</button>
     </div>
 
 </section>
@@ -302,6 +313,17 @@
 <footer>
     3DXIM — Advanced X-ray Imaging
 </footer>
+<script>
+function toggleBio(button) {
+    const member = button.closest('.member');
+    member.classList.toggle('expanded');
 
+    if (member.classList.contains('expanded')) {
+        button.textContent = 'Read less';
+    } else {
+        button.textContent = 'Read more';
+    }
+}
+</script>
 </body>
 </html>

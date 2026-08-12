@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Facilities | 3DXIM</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #222;
+            background: #fff;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 7%;
+            background: #111;
+            color: white;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 15px;
+        }
+
+        .hero {
+            padding: 110px 10%;
+            background: #f3f3f3;
+        }
+
+        .hero h1 {
+            font-size: 58px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 750px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        section {
+            padding: 90px 10%;
+        }
+
+        section h2 {
+            font-size: 38px;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            max-width: 850px;
+            font-size: 18px;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .facilities {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 45px;
+        }
+
+        .facility {
+            border: 1px solid #ddd;
+            padding: 35px;
+            background: #fafafa;
+        }
+
+        .facility h3 {
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            padding: 40px 10%;
+            background: #111;
+            color: white;
+        }
+
+        @media (max-width: 700px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+
+            nav a {
+                margin-left: 0;
+                margin-right: 20px;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .facilities {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">3DXIM</div>
+
+    <div>
+        <a href="index.html">Home</a>
+        <a href="facilities.html">Facilities</a>
+    </div>
+</nav>
+
+<div class="hero">
+    <h1>Facilities</h1>
+
+    <p>
+        Our imaging and data processing facilities provide advanced tools
+        for non-destructive characterization of materials and structures.
+    </p>
+</div>
+
+<section>
+    <h2>Imaging Capabilities</h2>
+
+    <p>
+        We combine laboratory X-ray imaging, high-resolution computed
+        tomography and advanced image processing to investigate internal
+        structures across multiple length scales.
+    </p>
+
+    <div class="facilities">
+
+        <div class="facility">
+            <h3>Micro-XCT</h3>
+            <p>
+                High-resolution laboratory X-ray computed tomography for
+                non-destructive 3D characterization of materials and
+                microstructures.
+            </p>
+        </div>
+
+        <div class="facility">
+            <h3>Laboratory X-ray CT</h3>
+            <p>
+                X-ray computed tomography for larger samples and a wide
+                range of engineering and scientific applications.
+            </p>
+        </div>
+
+        <div class="facility">
+            <h3>Synchrotron Imaging</h3>
+            <p>
+                Access to advanced synchrotron X-ray imaging techniques
+                for high-resolution and phase-sensitive measurements.
+            </p>
+        </div>
+
+        <div class="facility">
+            <h3>Image Processing & Analysis</h3>
+            <p>
+                Advanced segmentation, quantitative image analysis and
+                3D characterization of complex microstructures.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <h2>Research Support</h2>
+
+    <p>
+        Our imaging and data processing facilities at ZAG are available
+        to support your scientific work, from experimental design and
+        image acquisition to reconstruction, segmentation and quantitative
+        analysis.
+    </p>
+</section>
+
+<footer>
+    3DXIM — Advanced X-ray Imaging
+</footer>
+
+</body>
+</html>

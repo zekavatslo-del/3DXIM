@@ -45,7 +45,9 @@
         nav a:hover {
             opacity: 0.7;
         }
-
+.nav-links a.active {
+    font-weight: bold;
+}
         .hero {
             padding: 110px 10%;
             background: #f0f2f3;
@@ -206,12 +208,17 @@
 <body>
 
 <nav>
-    <div class="logo">3DXIM</div>
+    <div class="logo">
+        <a href="index.html">3DXIM</a>
+    </div>
 
-    <div>
-        <a href="index.html">Home</a>
+    <div class="nav-links">
+        <a href="index.html">About</a>
         <a href="facilities.html">Facilities</a>
-        <a href="team.html">Team</a>
+        <a href="research.html">Research</a>
+        <a href="team.html" class="active">Team</a>
+        <a href="publications.html">Publications</a>
+        <a href="index.html#contact">Contact</a>
     </div>
 </nav>
 

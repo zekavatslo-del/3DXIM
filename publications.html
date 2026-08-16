@@ -17,7 +17,7 @@
             font-family: Arial, sans-serif;
             color: #222;
             background: white;
-            line-height: 1.6;
+            line-height: 1.45;
         }
 
         nav {
@@ -34,12 +34,16 @@
             font-weight: bold;
             letter-spacing: 2px;
         }
-.logo a {
-    font-size: 30px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    margin-left: 0;
-}
+
+        .logo a {
+            font-size: 30px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-left: 0;
+            color: white;
+            text-decoration: none;
+        }
+
         nav a {
             color: white;
             text-decoration: none;
@@ -50,45 +54,47 @@
         nav a:hover {
             opacity: 0.7;
         }
-.nav-links {
-    display: flex;
-    align-items: center;
-}
 
-.nav-links a.active {
-    font-weight: 700;
-    font-size: 17px;
-}
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links a.active {
+            font-weight: 700;
+            font-size: 17px;
+        }
+
         .hero {
-            padding: 110px 10%;
+            padding: 95px 10%;
             background: #f0f2f3;
         }
 
         .hero h1 {
-            font-size: 58px;
+            font-size: 52px;
             line-height: 1.1;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
         }
 
         .hero p {
             max-width: 780px;
-            font-size: 20px;
+            font-size: 18px;
             color: #666;
         }
 
         section {
-            padding: 90px 10%;
+            padding: 75px 10%;
         }
 
         .year {
-            font-size: 42px;
-            margin-bottom: 35px;
-            padding-bottom: 12px;
+            font-size: 38px;
+            margin-bottom: 24px;
+            padding-bottom: 8px;
             border-bottom: 2px solid #ddd;
         }
 
         .publication {
-            padding: 18px 0;
+            padding: 15px 0;
             border-bottom: 1px solid #ddd;
             max-width: 1000px;
         }
@@ -99,24 +105,26 @@
 
         .authors {
             font-size: 14px;
-            margin-bottom: 8px;
+            margin-bottom: 4px;
         }
 
         .title {
             font-size: 18px;
             font-weight: bold;
-            margin-bottom: 8px;
+            margin-bottom: 4px;
+            line-height: 1.4;
         }
 
         .journal {
             color: #666;
-            margin-bottom: 10px;
+            font-size: 15px;
+            margin-bottom: 5px;
         }
 
         .doi a {
             color: #2f6f8f;
             text-decoration: none;
-            font-size: 15px;
+            font-size: 14px;
         }
 
         .doi a:hover {
@@ -131,6 +139,7 @@
         }
 
         @media (max-width: 700px) {
+
             nav {
                 flex-direction: column;
                 align-items: flex-start;
@@ -142,24 +151,29 @@
                 margin-right: 18px;
             }
 
+            .nav-links {
+                flex-wrap: wrap;
+                gap: 8px 0;
+            }
+
             .hero {
-                padding: 80px 7%;
+                padding: 75px 7%;
             }
 
             .hero h1 {
-                font-size: 42px;
+                font-size: 40px;
             }
 
             section {
-                padding: 70px 7%;
+                padding: 60px 7%;
             }
 
             .year {
-                font-size: 34px;
+                font-size: 32px;
             }
 
             .title {
-                font-size: 19px;
+                font-size: 17px;
             }
         }
     </style>
@@ -191,7 +205,6 @@
     </p>
 </div>
 
-
 <section>
 
     <h2 class="year">2026</h2>
@@ -200,15 +213,12 @@
         <div class="authors">
             Kregar, K., Hren, M., Nagode, A., Kosec, T. (2026).
         </div>
-
         <div class="title">
             A coupled multi-electrode array sensor for monitoring galvanic corrosion between copper and steel.
         </div>
-
         <div class="journal">
             Journal of The Electrochemical Society, 173(14), 147503.
         </div>
-
         <div class="doi">
             <a href="https://doi.org/10.1149/1945-7111/ae89ec" target="_blank">
                 DOI: 10.1149/1945-7111/ae89ec
@@ -216,20 +226,16 @@
         </div>
     </div>
 
-
     <div class="publication">
         <div class="authors">
             Hren, M., Kosec, T., Legat, A. (2026).
         </div>
-
         <div class="title">
             Evolution of macrocell and microcell corrosion in concrete subjected to simulated tiding.
         </div>
-
         <div class="journal">
             Electrochimica Acta, 549, 148026.
         </div>
-
         <div class="doi">
             <a href="https://doi.org/10.1016/j.electacta.2025.148026" target="_blank">
                 DOI: 10.1016/j.electacta.2025.148026
@@ -238,21 +244,18 @@
     </div>
 
 
-    <h2 class="year" style="margin-top: 80px;">2025</h2>
+    <h2 class="year" style="margin-top: 55px;">2025</h2>
 
     <div class="publication">
         <div class="authors">
             Gartner, N., Hren, M., Kosec, T., Legat, A. (2025).
         </div>
-
         <div class="title">
             Characterization of steel corrosion in alkali-activated mortars using advanced techniques.
         </div>
-
         <div class="journal">
             Case Studies in Construction Materials, 23, e05165.
         </div>
-
         <div class="doi">
             <a href="https://doi.org/10.1016/j.cscm.2025.e05165" target="_blank">
                 DOI: 10.1016/j.cscm.2025.e05165
@@ -261,21 +264,52 @@
     </div>
 
 
-    <h2 class="year" style="margin-top: 80px;">2024</h2>
+    <h2 class="year" style="margin-top: 55px;">2024</h2>
+
+    <div class="publication">
+        <div class="authors">
+            Forel, M.-B., Poulet-Crovisier, N., Korat Bensa, L., Maddocks, R. F. (2024).
+        </div>
+        <div class="title">
+            Ornate Bairdiidae (Ostracoda) in 3 dimensions: exploring carapace morphology and pore canals of Triebelina van den Bold, 1946, Nodobairdia Kollmann, 1963 and Mirabairdia Kollmann, 1963.
+        </div>
+        <div class="journal">
+            Comptes Rendus Palévol, 23(11), 137–159.
+        </div>
+        <div class="doi">
+            <a href="https://doi.org/10.5852/cr-palevol2024v23a11" target="_blank">
+                DOI: 10.5852/cr-palevol2024v23a11
+            </a>
+        </div>
+    </div>
+
+    <div class="publication">
+        <div class="authors">
+            Pavlin, M., Horvat, B., Cerc Korošec, R., Capuder, R., Korat Bensa, L., Ducman, V. (2024).
+        </div>
+        <div class="title">
+            Characterisation of a 3D-printed alkali-activated material based on waste mineral wool at room and elevated temperatures.
+        </div>
+        <div class="journal">
+            Cement and Concrete Composites, 147, 105445.
+        </div>
+        <div class="doi">
+            <a href="https://doi.org/10.1016/j.cemconcomp.2024.105445" target="_blank">
+                DOI: 10.1016/j.cemconcomp.2024.105445
+            </a>
+        </div>
+    </div>
 
     <div class="publication">
         <div class="authors">
             Hren, M., Kosec, T., Legat, A. (2024).
         </div>
-
         <div class="title">
             An investigation into corrosion around voids at the steel-concrete interface.
         </div>
-
         <div class="journal">
             Cement and Concrete Research, 181, 107545.
         </div>
-
         <div class="doi">
             <a href="https://doi.org/10.1016/j.cemconres.2024.107545" target="_blank">
                 DOI: 10.1016/j.cemconres.2024.107545
@@ -283,20 +317,16 @@
         </div>
     </div>
 
-
     <div class="publication">
         <div class="authors">
             Bajt Leban, M., Zajec, B., Podgornik, B., Donik, Č., Jovičević-Klug, P., Hren, M., Legat, A. (2024).
         </div>
-
         <div class="title">
             Susceptibility of X17CrNi16-2 martensitic stainless steel to hydrogen embrittlement after conventional and deep cryogenic heat treatment.
         </div>
-
         <div class="journal">
             Engineering Failure Analysis, 162, 108403.
         </div>
-
         <div class="doi">
             <a href="https://doi.org/10.1016/j.engfailanal.2024.108403" target="_blank">
                 DOI: 10.1016/j.engfailanal.2024.108403
@@ -305,21 +335,18 @@
     </div>
 
 
-    <h2 class="year" style="margin-top: 80px;">2023</h2>
+    <h2 class="year" style="margin-top: 55px;">2023</h2>
 
     <div class="publication">
         <div class="authors">
-            Gaspari, A., Germek, D., Jelinčič, A., Hren, M., Korat Bensa, L., Frka, D. (2023).
+            Gaspari, A., Germek, D., Jelinčič, A., Hren, M., Korat Bensa, L., Frka, D., et al. (2023).
         </div>
-
         <div class="title">
             Enigma M4 cipher machine from the wreck of the German minesweeper R 15 near Umag.
         </div>
-
         <div class="journal">
-            Annales. Series Historia et Sociologia, 33(1), 1–30.
+            Annales: Series Historia et Sociologia, 33(1), 1–30.
         </div>
-
         <div class="doi">
             <a href="https://doi.org/10.19233/ASHS.2023.01" target="_blank">
                 DOI: 10.19233/ASHS.2023.01
@@ -327,20 +354,16 @@
         </div>
     </div>
 
-
     <div class="publication">
         <div class="authors">
             Hren, M., Kosec, T., Legat, A. (2023).
         </div>
-
         <div class="title">
             Characterization of steel corrosion processes in various blended cements by means of coupled multi-electrode arrays.
         </div>
-
         <div class="journal">
             Cement and Concrete Research, 168, 107134.
         </div>
-
         <div class="doi">
             <a href="https://doi.org/10.1016/j.cemconres.2023.107134" target="_blank">
                 DOI: 10.1016/j.cemconres.2023.107134
@@ -348,20 +371,16 @@
         </div>
     </div>
 
-
     <div class="publication">
         <div class="authors">
             Bajt Leban, M., Hren, M., Kosec, T. (2023).
         </div>
-
         <div class="title">
             The microstructure, mechanical and electrochemical properties of 3D printed alloys with reusing powders.
         </div>
-
         <div class="journal">
             Scientific Reports, 13, 3245.
         </div>
-
         <div class="doi">
             <a href="https://doi.org/10.1038/s41598-023-28971-9" target="_blank">
                 DOI: 10.1038/s41598-023-28971-9
@@ -369,8 +388,47 @@
         </div>
     </div>
 
-</section>
 
+    <h2 class="year" style="margin-top: 55px;">2022</h2>
+
+    <div class="publication">
+        <div class="authors">
+            Guček Puhar, E., Korat Bensa, L., Erič, M., Jaklič, A., Solina, F. (2022).
+        </div>
+        <div class="title">
+            Microtomographic analysis of a Palaeolithic wooden point from the Ljubljanica River.
+        </div>
+        <div class="journal">
+            Sensors, 22(6), 2369.
+        </div>
+        <div class="doi">
+            <a href="https://doi.org/10.3390/s22062369" target="_blank">
+                DOI: 10.3390/s22062369
+            </a>
+        </div>
+    </div>
+
+
+    <h2 class="year" style="margin-top: 55px;">2021</h2>
+
+    <div class="publication">
+        <div class="authors">
+            Guček Puhar, E., Jaklič, A., Solina, F., Korat Bensa, L., Erič, M. (2021).
+        </div>
+        <div class="title">
+            Anatomical-morphological analysis of a volumetric 3D model of an archaeological object.
+        </div>
+        <div class="journal">
+            Archeologia e Calcolatori, 32.2, 197–208.
+        </div>
+        <div class="doi">
+            <a href="https://doi.org/10.19282/ac.32.2.2021.18" target="_blank">
+                DOI: 10.19282/ac.32.2.2021.18
+            </a>
+        </div>
+    </div>
+
+</section>
 
 <footer>
     3DXIM — Advanced X-ray Imaging

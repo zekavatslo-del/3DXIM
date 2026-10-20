@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Use Cases | 3DXIM</title>
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.4.0/model-viewer.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;color:#222;background:#fff;line-height:1.6}
+nav{display:flex;justify-content:space-between;align-items:center;padding:24px 7%;background:#111;color:#fff}
+.logo a{font-size:28px;font-weight:bold;letter-spacing:2px;margin-left:0}
+nav a{color:#fff;text-decoration:none;margin-left:28px;font-size:15px}
+nav a.active{font-weight:700}
+.hero{padding:105px 10%;background:#f0f2f3}
+.hero h1{font-size:58px;line-height:1.1;margin-bottom:18px}
+.hero p{max-width:780px;font-size:20px;color:#666}
+section{padding:80px 10%}
+.cases-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;align-items:start}
+.case-card{border:1px solid #ddd;background:#fff;cursor:pointer;transition:.25s}
+.case-card:hover{transform:translateY(-4px);box-shadow:0 10px 28px rgba(0,0,0,.1)}
+.case-card img{width:100%;height:230px;object-fit:cover;display:block}
+.case-card h2{font-size:21px;padding:18px 20px}
+.case-detail{display:none;grid-column:1/-1;background:#f4f5f5;border-top:4px solid #222;padding:34px;margin:4px 0 18px;grid-template-columns:1.35fr 1fr;gap:38px;position:relative}
+.case-detail.open{display:grid}
+.case-detail model-viewer{width:100%;height:580px;background:#e5e7e7}
+.case-text{padding:15px 34px 15px 0}
+.case-text h2{font-size:34px;line-height:1.2;margin-bottom:18px}
+.case-text p{font-size:17px;color:#555}
+.close-detail{position:absolute;right:18px;top:10px;border:0;background:transparent;font-size:34px;cursor:pointer;line-height:1}
+footer{padding:35px 10%;background:#090909;color:#aaa;font-size:14px}
+@media(max-width:950px){nav{align-items:flex-start}.cases-grid{grid-template-columns:repeat(2,1fr)}.case-detail{grid-template-columns:1fr}.case-detail model-viewer{height:460px}.case-text{padding:0}}
+@media(max-width:700px){nav{flex-direction:column;gap:18px}.nav-links a{margin-left:0;margin-right:16px;display:inline-block;margin-bottom:8px}.hero{padding:75px 7%}.hero h1{font-size:42px}section{padding:60px 7%}.cases-grid{grid-template-columns:1fr}.case-detail{padding:24px 18px}.case-detail model-viewer{height:400px}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo"><a href="index.html">3DXIM</a></div>
+  <div class="nav-links">
+    <a href="index.html#about">About</a>
+    <a href="facilities.html">Facilities</a>
+    <a href="index.html#research">Research</a>
+    <a href="use-cases.html" class="active">Use Cases</a>
+    <a href="team.html">Team</a>
+    <a href="publications.html">Publications</a>
+    <a href="news.html">News</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+</nav>
+<header class="hero"><h1>Use Cases</h1><p>Explore selected applications of 3D X-ray imaging and analysis.</p></header>
+<section>
+  <div class="cases-grid" id="casesGrid">
+    <article class="case-card" data-title="Use Case 1" data-image="images/case01.jpg" data-model="models/case01.glb" data-description="Add the description and other information for this use case here.">
+      <img src="images/case01.jpg" alt="Use Case 1 thumbnail">
+      <h2>Use Case 1</h2>
+    </article>
+    <article class="case-card" data-title="Use Case 2" data-image="images/case02.jpg" data-model="models/case02.glb" data-description="Add the description and other information for this use case here.">
+      <img src="images/case02.jpg" alt="Use Case 2 thumbnail">
+      <h2>Use Case 2</h2>
+    </article>
+    <article class="case-card" data-title="Use Case 3" data-image="images/case03.jpg" data-model="models/case03.glb" data-description="Add the description and other information for this use case here.">
+      <img src="images/case03.jpg" alt="Use Case 3 thumbnail">
+      <h2>Use Case 3</h2>
+    </article>
+    <article class="case-card" data-title="Use Case 4" data-image="images/case04.jpg" data-model="models/case04.glb" data-description="Add the description and other information for this use case here.">
+      <img src="images/case04.jpg" alt="Use Case 4 thumbnail">
+      <h2>Use Case 4</h2>
+    </article>
+    <article class="case-card" data-title="Use Case 5" data-image="images/case05.jpg" data-model="models/case05.glb" data-description="Add the description and other information for this use case here.">
+      <img src="images/case05.jpg" alt="Use Case 5 thumbnail">
+      <h2>Use Case 5</h2>
+    </article>
+    <article class="case-card" data-title="Use Case 6" data-image="images/case06.jpg" data-model="models/case06.glb" data-description="Add the description and other information for this use case here.">
+      <img src="images/case06.jpg" alt="Use Case 6 thumbnail">
+      <h2>Use Case 6</h2>
+    </article>
+    <article class="case-card" data-title="Use Case 7" data-image="images/case07.jpg" data-model="models/case07.glb" data-description="Add the description and other information for this use case here.">
+      <img src="images/case07.jpg" alt="Use Case 7 thumbnail">
+      <h2>Use Case 7</h2>
+    </article>
+    <article class="case-card" data-title="Use Case 8" data-image="images/case08.jpg" data-model="models/case08.glb" data-description="Add the description and other information for this use case here.">
+      <img src="images/case08.jpg" alt="Use Case 8 thumbnail">
+      <h2>Use Case 8</h2>
+    </article>
+    <article class="case-card" data-title="Use Case 9" data-image="images/case09.jpg" data-model="models/case09.glb" data-description="Add the description and other information for this use case here.">
+      <img src="images/case09.jpg" alt="Use Case 9 thumbnail">
+      <h2>Use Case 9</h2>
+    </article>
+    <div class="case-detail" id="caseDetail">
+      <button class="close-detail" type="button" aria-label="Close details">&times;</button>
+      <model-viewer id="caseModel" alt="Interactive 3D model" camera-controls auto-rotate shadow-intensity="1"></model-viewer>
+      <div class="case-text"><h2 id="caseTitle"></h2><p id="caseDescription"></p></div>
+    </div>
+  </div>
+</section>
+<footer>3DXIM — Advanced X-ray Imaging</footer>
+<script>
+const grid=document.getElementById('casesGrid');
+const detail=document.getElementById('caseDetail');
+const model=document.getElementById('caseModel');
+const title=document.getElementById('caseTitle');
+const description=document.getElementById('caseDescription');
+const cards=[...document.querySelectorAll('.case-card')];
+
+cards.forEach(card=>card.addEventListener('click',()=>{
+  title.textContent=card.dataset.title;
+  description.textContent=card.dataset.description;
+  model.setAttribute('src',card.dataset.model);
+  model.setAttribute('poster',card.dataset.image);
+  detail.classList.add('open');
+
+  const columns=getComputedStyle(grid).gridTemplateColumns.split(' ').length;
+  const cardIndex=cards.indexOf(card);
+  const endOfRow=Math.min(Math.ceil((cardIndex+1)/columns)*columns,cards.length)-1;
+  cards[endOfRow].after(detail);
+  detail.scrollIntoView({behavior:'smooth',block:'nearest'});
+}));
+
+document.querySelector('.close-detail').addEventListener('click',()=>{
+  detail.classList.remove('open');
+  model.removeAttribute('src');
+});
+</script>
+</body>
+</html>

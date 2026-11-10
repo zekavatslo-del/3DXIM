@@ -1,775 +1,894 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Publications | 3DXIM</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+ <title>Publications | 3DXIM</title>
 
-        body {
-            font-family: Arial, sans-serif;
-            color: #222;
-            background: white;
-            line-height: 1.45;
-        }
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 24px 7%;
-            background: #111;
-            color: white;
-        }
+ <style>
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
 
-        .logo {
-            font-size: 27px;
-            font-weight: bold;
-            letter-spacing: 2px;
-        }
 
-        .logo a {
-            font-size: 30px;
-            font-weight: bold;
-            letter-spacing: 2px;
-            margin-left: 0;
-            color: white;
-            text-decoration: none;
-        }
+ body {
+ font-family: Arial, sans-serif;
+ color: #222;
+ background: white;
+ line-height: 1.45;
+ }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 28px;
-            font-size: 15px;
-        }
 
-        nav a:hover {
-            opacity: 0.7;
-        }
+ nav {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 24px 7%;
+ background: #111;
+ color: white;
+ }
 
-        .nav-links {
-            display: flex;
-            align-items: center;
-        }
 
-        .nav-links a.active {
-            font-weight: 700;
-            font-size: 17px;
-        }
+ .logo {
+ font-size: 27px;
+ font-weight: bold;
+ letter-spacing: 2px;
+ }
 
-        .hero {
-            padding: 95px 10%;
-            background: #f0f2f3;
-        }
 
-        .hero h1 {
-            font-size: 52px;
-            line-height: 1.1;
-            margin-bottom: 16px;
-        }
+ .logo a {
+ font-size: 30px;
+ font-weight: bold;
+ letter-spacing: 2px;
+ margin-left: 0;
+ color: white;
+ text-decoration: none;
+ }
 
-        .hero p {
-            max-width: 780px;
-            font-size: 18px;
-            color: #666;
-        }
 
-        section {
-            padding: 75px 10%;
-        }
+ nav a {
+ color: white;
+ text-decoration: none;
+ margin-left: 28px;
+ font-size: 15px;
+ }
 
-        .year {
-            font-size: 38px;
-            margin-bottom: 24px;
-            padding-bottom: 8px;
-            border-bottom: 2px solid #ddd;
-        }
 
-        .publication {
-            padding: 15px 0;
-            border-bottom: 1px solid #ddd;
-            max-width: 1000px;
-        }
+ nav a:hover {
+ opacity: 0.7;
+ }
 
-        .authors {
-            font-size: 14px;
-            margin-bottom: 4px;
-        }
 
-        .title {
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 4px;
-            line-height: 1.4;
-        }
+ .nav-links {
+ display: flex;
+ align-items: center;
+ }
 
-        .journal {
-            color: #666;
-            font-size: 15px;
-            margin-bottom: 5px;
-        }
 
-        .doi a {
-            color: #2f6f8f;
-            text-decoration: none;
-            font-size: 14px;
-        }
+ .nav-links a.active {
+ font-weight: 700;
+ font-size: 17px;
+ }
 
-        .doi a:hover {
-            text-decoration: underline;
-        }
 
-        footer {
-            padding: 35px 10%;
-            background: #090909;
-            color: #aaa;
-            font-size: 14px;
-        }
+ .hero {
+ padding: 95px 10%;
+ background: #f0f2f3;
+ }
 
-        @media (max-width: 700px) {
 
-            nav {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 18px;
-            }
+ .hero h1 {
+ font-size: 52px;
+ line-height: 1.1;
+ margin-bottom: 16px;
+ }
 
-            nav a {
-                margin-left: 0;
-                margin-right: 18px;
-            }
 
-            .nav-links {
-                flex-wrap: wrap;
-                gap: 8px 0;
-            }
+ .hero p {
+ max-width: 780px;
+ font-size: 18px;
+ color: #666;
+ }
 
-            .hero {
-                padding: 75px 7%;
-            }
 
-            .hero h1 {
-                font-size: 40px;
-            }
+ section {
+ padding: 75px 10%;
+ }
 
-            section {
-                padding: 60px 7%;
-            }
 
-            .year {
-                font-size: 32px;
-            }
+ .year {
+ font-size: 38px;
+ margin-bottom: 24px;
+ padding-bottom: 8px;
+ border-bottom: 2px solid #ddd;
+ }
 
-            .title {
-                font-size: 17px;
-            }
-        }
-    </style>
+
+ .publication {
+ padding: 15px 0;
+ border-bottom: 1px solid #ddd;
+ max-width: 1000px;
+ }
+
+
+ .authors {
+ font-size: 14px;
+ margin-bottom: 4px;
+ }
+
+
+ .title {
+ font-size: 18px;
+ font-weight: bold;
+ margin-bottom: 4px;
+ line-height: 1.4;
+ }
+
+
+ .journal {
+ color: #666;
+ font-size: 15px;
+ margin-bottom: 5px;
+ }
+
+
+ .doi a {
+ color: #2f6f8f;
+ text-decoration: none;
+ font-size: 14px;
+ }
+
+
+ .doi a:hover {
+ text-decoration: underline;
+ }
+
+
+ footer {
+ padding: 35px 10%;
+ background: #090909;
+ color: #aaa;
+ font-size: 14px;
+ }
+
+
+ @media (max-width: 700px) {
+
+
+ nav {
+ flex-direction: column;
+ align-items: flex-start;
+ gap: 18px;
+ }
+
+
+ nav a {
+ margin-left: 0;
+ margin-right: 18px;
+ }
+
+
+ .nav-links {
+ flex-wrap: wrap;
+ gap: 8px 0;
+ }
+
+
+ .hero {
+ padding: 75px 7%;
+ }
+
+
+ .hero h1 {
+ font-size: 40px;
+ }
+
+
+ section {
+ padding: 60px 7%;
+ }
+
+
+ .year {
+ font-size: 32px;
+ }
+
+
+ .title {
+ font-size: 17px;
+ }
+ }
+ </style>
 </head>
+
 
 <body>
 
-<nav>
-    <div class="logo">
-        <a href="index.html">3DXIM</a>
-    </div>
 
-    <div class="nav-links">
-        <a href="index.html">About</a>
-        <a href="facilities.html">Facilities</a>
-        <a href="research.html">Research</a>
-        <a href="use-cases.html">Use Cases</a>
-        <a href="team.html">Team</a>
-        <a href="publications.html" class="active">Publications</a>
-        <a href="index.html#contact">Contact</a>
-    </div>
+<nav>
+ <div class="logo">
+ <a href="index.html">3DXIM</a>
+ </div>
+
+
+ <div class="nav-links">
+ <a href="index.html">About</a>
+ <a href="facilities.html">Facilities</a>
+ <a href="research.html">Research</a>
+ <a href="use-cases.html">Use Cases</a>
+ <a href="team.html">Team</a>
+ <a href="publications.html" class="active">Publications</a>
+ <a href="index.html#contact">Contact</a>
+ </div>
 </nav>
 
-<div class="hero">
-    <h1>Publications</h1>
 
-    <p>
+<div class="hero">
+ <h1>Publications</h1>
+
+
+ <p>
         Selected scientific publications from our research activities
         and collaborations.
-    </p>
+ </p>
 </div>
+
 
 <section>
 
-    <h2 class="year">2026</h2>
 
-    <div class="publication">
-        <div class="authors">
+ <h2 class="year">2026</h2>
+
+
+ <div class="publication">
+ <div class="authors">
+            Lemaire, T., Morgavi, D., Mancini, L. (2026).
+ </div>
+ <div class="title">
+            Crystallisation and thermo-redox conditions governing lava tube formation and development during the 1858 eruption of Vesuvius.
+ </div>
+ <div class="journal">
+            Bulletin of Volcanology, 88, 136.
+ </div>
+ <div class="doi">
+ <a href="https://link.springer.com/article/10.1007/s00445-026-02060-x" target="_blank" rel="noopener noreferrer">
+                DOI: 10.1007/s00445-026-02060-x
+ </a>
+ </div>
+ </div>
+
+
+ <div class="publication">
+ <div class="authors">
+            Peres, S., Griffiths, T. A., Masotta, M., Colle, F., Pontesilli, A., Iannini Lelarge, S., Mancini, L., Abart, R. (2026).
+ </div>
+ <div class="title">
+            The effect of heterogeneous nucleation site availability on rock microstructure: a new perspective from EBSD investigation.
+ </div>
+ <div class="journal">
+            Contributions to Mineralogy and Petrology, 181.
+ </div>
+ <div class="doi">
+ <a href="https://link.springer.com/article/10.1007/s00410-026-02360-7" target="_blank" rel="noopener noreferrer">
+                DOI: 10.1007/s00410-026-02360-7
+ </a>
+ </div>
+ </div>
+
+
+ <div class="publication">
+ <div class="authors">
             Arzilli, F., La Spina, G., Bamber, E. C., Morgavi, D., Fedele, L., Prašek, M., Santangelo, I., Chiominto, G., Perrotta, A., Lemaire, T., Balcone-Boissard, H., Giordano, D., Scarpati, C., Mancini, L. (2026).
-        </div>
-        <div class="title">
+ </div>
+ <div class="title">
             The role of crystal-bubble interactions, outgassing and magma composition in the ascent dynamics of alkaline magmas: Implications for eruptions at Vesuvius.
-        </div>
-        <div class="journal">
+ </div>
+ <div class="journal">
             Earth and Planetary Science Letters, 675, 119771.
-        </div>
-        <div class="doi">
-            <a href="https://doi.org/10.1016/j.epsl.2025.119771" target="_blank">
+ </div>
+ <div class="doi">
+ <a href="https://doi.org/10.1016/j.epsl.2025.119771" target="_blank">
                 DOI: 10.1016/j.epsl.2025.119771
-            </a>
-        </div>
-    </div>
+ </a>
+ </div>
+ </div>
 
-    <div class="publication">
-        <div class="authors">
+
+ <div class="publication">
+ <div class="authors">
             Kregar, K., Hren, M., Nagode, A., Kosec, T. (2026).
-        </div>
-        <div class="title">
+ </div>
+ <div class="title">
             A coupled multi-electrode array sensor for monitoring galvanic corrosion between copper and steel.
-        </div>
-        <div class="journal">
+ </div>
+ <div class="journal">
             Journal of The Electrochemical Society, 173(14), 147503.
-        </div>
-        <div class="doi">
-            <a href="https://doi.org/10.1149/1945-7111/ae89ec" target="_blank">
+ </div>
+ <div class="doi">
+ <a href="https://doi.org/10.1149/1945-7111/ae89ec" target="_blank">
                 DOI: 10.1149/1945-7111/ae89ec
-            </a>
-        </div>
-    </div>
+ </a>
+ </div>
+ </div>
 
-    <div class="publication">
-        <div class="authors">
+
+ <div class="publication">
+ <div class="authors">
             Hren, M., Kosec, T., Legat, A. (2026).
-        </div>
-        <div class="title">
+ </div>
+ <div class="title">
             Evolution of macrocell and microcell corrosion in concrete subjected to simulated tiding.
-        </div>
-        <div class="journal">
+ </div>
+ <div class="journal">
             Electrochimica Acta, 549, 148026.
-        </div>
-        <div class="doi">
-            <a href="https://doi.org/10.1016/j.electacta.2025.148026" target="_blank">
+ </div>
+ <div class="doi">
+ <a href="https://doi.org/10.1016/j.electacta.2025.148026" target="_blank">
                 DOI: 10.1016/j.electacta.2025.148026
-            </a>
-        </div>
-    </div>
+ </a>
+ </div>
+ </div>
 
 
-    <h2 class="year" style="margin-top: 55px;">2025</h2>
 
-    <div class="publication">
-        <div class="authors">
+
+ <h2 class="year" style="margin-top: 55px;">2025</h2>
+
+
+ <div class="publication">
+ <div class="authors">
             Motta, G., Voltolini, M., Mancini, L., Dreossi, D., Brun, F., Tirelli, V., Castelletto, L. P., Rogelja, M., Terlizzi, A., Avian, M. (2025).
-        </div>
-        <div class="title">
+ </div>
+ <div class="title">
             New advances in jellyfish anatomy: the benefits of endocasts and X-ray microtomography in the investigation of the gastrovascular system of Cotylorhiza tuberculata (Scyphozoa; Rhizostomeae; Cepheidae).
-        </div>
-        <div class="journal">
+ </div>
+ <div class="journal">
             PLOS ONE, 20(11), e0336682.
-        </div>
-        <div class="doi">
-            <a href="https://doi.org/10.1371/journal.pone.0336682" target="_blank">
+ </div>
+ <div class="doi">
+ <a href="https://doi.org/10.1371/journal.pone.0336682" target="_blank">
                 DOI: 10.1371/journal.pone.0336682
-            </a>
-        </div>
-    </div>
+ </a>
+ </div>
+ </div>
 
-    <div class="publication">
-        <div class="authors">
+
+ <div class="publication">
+ <div class="authors">
             Rossi, F., Rydzyk, M. M., Barba, L., Malucelli, E., Palamà, M. E. F., Gentili, C., Mastrogiacomo, M., Cedola, A., Mancini, L., Salomé, M., Castillo-Michel, H., Donati, D. M., Gambarotti, M., Lucarelli, E., Fratini, M., Iotti, S. (2025).
-        </div>
-        <div class="title">
+ </div>
+ <div class="title">
             Insights into the osteosarcoma microenvironment: Multiscale analysis of structural and mineral heterogeneity.
-        </div>
-        <div class="journal">
+ </div>
+ <div class="journal">
             Acta Biomaterialia, 199, 193–201.
-        </div>
-        <div class="doi">
-            <a href="https://doi.org/10.1016/j.actbio.2025.04.057" target="_blank">
+ </div>
+ <div class="doi">
+ <a href="https://doi.org/10.1016/j.actbio.2025.04.057" target="_blank">
                 DOI: 10.1016/j.actbio.2025.04.057
-            </a>
-        </div>
-    </div>
+ </a>
+ </div>
+ </div>
 
-    <div class="publication">
-        <div class="authors">
+
+ <div class="publication">
+ <div class="authors">
             Delmas, C., Nguyen, V. H., Vachon, J.-J., Chapron, D., Longo, E., Mancini, L., Michelet, A., Meuri, M., Faivre, V. (2025).
-        </div>
-        <div class="title">
+ </div>
+ <div class="title">
             Prilling of crystallizable water-in-oil emulsions: Towards co-encapsulation of hydrophilic and lipophilic active ingredients within lipid microparticles.
-        </div>
-        <div class="journal">
+ </div>
+ <div class="journal">
             International Journal of Pharmaceutics, 671, 125215.
-        </div>
-        <div class="doi">
-            <a href="https://doi.org/10.1016/j.ijpharm.2025.125215" target="_blank">
+ </div>
+ <div class="doi">
+ <a href="https://doi.org/10.1016/j.ijpharm.2025.125215" target="_blank">
                 DOI: 10.1016/j.ijpharm.2025.125215
-            </a>
-        </div>
-    </div>
+ </a>
+ </div>
+ </div>
 
-    <div class="publication">
-        <div class="authors">
+
+ <div class="publication">
+ <div class="authors">
             Bisciotti, A., Mancini, L., Viani, A., Zalar Serjun, V., Mladenovič, A., Cruciani, G. (2025).
-        </div>
-        <div class="title">
+ </div>
+ <div class="title">
             Multi-scale X-ray techniques for assessing recycled concrete aggregate: from XRPD analysis of leftover cement in recycled aggregates to micro-CT imaging of concrete microstructure.
-        </div>
-        <div class="journal">
+ </div>
+ <div class="journal">
             Developments in the Built Environment, 23, 100709.
-        </div>
-        <div class="doi">
-            <a href="https://doi.org/10.1016/j.dibe.2025.100709" target="_blank">
+ </div>
+ <div class="doi">
+ <a href="https://doi.org/10.1016/j.dibe.2025.100709" target="_blank">
                 DOI: 10.1016/j.dibe.2025.100709
-            </a>
-        </div>
-    </div>
+ </a>
+ </div>
+ </div>
 
-    <div class="publication">
-        <div class="authors">
+
+ <div class="publication">
+ <div class="authors">
             Rojas-Alva, U., Mancini, L., Mauko Pranjić, A., Marini, E., Bozzini, B. (2025).
-        </div>
-        <div class="title">
+ </div>
+ <div class="title">
             On thermal safety characteristics of rechargeable alkaline batteries based on zinc and manganese dioxide.
-        </div>
-        <div class="journal">
+ </div>
+ <div class="journal">
             Process Safety and Environmental Protection, 199, 107175.
-        </div>
-        <div class="doi">
-            <a href="https://doi.org/10.1016/j.psep.2025.107175" target="_blank">
+ </div>
+ <div class="doi">
+ <a href="https://doi.org/10.1016/j.psep.2025.107175" target="_blank">
                 DOI: 10.1016/j.psep.2025.107175
-            </a>
-        </div>
-    </div>
+ </a>
+ </div>
+ </div>
 
-    <div class="publication">
-        <div class="authors">
+
+ <div class="publication">
+ <div class="authors">
             Ibrahim, S., Grenni, P., Mancini, L., Voltolini, M., Abdel-Fatah, H. M. K., Refaat, A., Atwa, D. M. (2025).
-        </div>
-        <div class="title">
+ </div>
+ <div class="title">
             Multifactorial Analysis of Wood Deterioration in Ancient Egypt: A Case Study of Khufu’s Second Solar Boat.
-        </div>
-        <div class="journal">
+ </div>
+ <div class="journal">
             Applied Sciences, 15(7), 3952.
-        </div>
-        <div class="doi">
-            <a href="https://doi.org/10.3390/app15073952" target="_blank">
+ </div>
+ <div class="doi">
+ <a href="https://doi.org/10.3390/app15073952" target="_blank">
                 DOI: 10.3390/app15073952
-            </a>
-        </div>
-    </div>
+ </a>
+ </div>
+ </div>
 
-    <div class="publication">
-        <div class="authors">
+
+ <div class="publication">
+ <div class="authors">
             Gartner, N., Hren, M., Kosec, T., Legat, A. (2025).
-        </div>
-        <div class="title">
+ </div>
+ <div class="title">
             Characterization of steel corrosion in alkali-activated mortars using advanced techniques.
-        </div>
-        <div class="journal">
+ </div>
+ <div class="journal">
             Case Studies in Construction Materials, 23, e05165.
-        </div>
-        <div class="doi">
-            <a href="https://doi.org/10.1016/j.cscm.2025.e05165" target="_blank">
+ </div>
+ <div class="doi">
+ <a href="https://doi.org/10.1016/j.cscm.2025.e05165" target="_blank">
                 DOI: 10.1016/j.cscm.2025.e05165
-            </a>
-        </div>
-    </div>
+ </a>
+ </div>
+ </div>
 
 
-    <h2 class="year" style="margin-top: 55px;">2024</h2>
 
-    <div class="publication">
-        <div class="authors">
+
+ <h2 class="year" style="margin-top: 55px;">2024</h2>
+
+
+ <div class="publication">
+ <div class="authors">
             Peres, S., Griffiths, T. A., Colle, F., Iannini Lelarge, S., Masotta, M., Pontesilli, A., Mancini, L., Abart, R. (2024).
-        </div>
-        <div class="title">
+ </div>
+ <div class="title">
             Identifying crystal nucleation mechanisms in a synthetic trachybasalt: a multimodal approach.
-        </div>
-        <div class="journal">
+ </div>
+ <div class="journal">
             Contributions to Mineralogy and Petrology, 179(9), 84.
-        </div>
-        <div class="doi">
-            <a href="https://doi.org/10.1007/s00410-024-02161-w" target="_blank">
+ </div>
+ <div class="doi">
+ <a href="https://doi.org/10.1007/s00410-024-02161-w" target="_blank">
                 DOI: 10.1007/s00410-024-02161-w
-            </a>
-        </div>
-    </div>
+ </a>
+ </div>
+ </div>
 
-    <div class="publication">
-        <div class="authors">
+
+ <div class="publication">
+ <div class="authors">
             Riga, A., Profico, A., Mori, T., Frittitta, R., Nava, A., Mancini, L., Dreossi, D., Radovčić, D., Rice, H., Bondioli, L., Marchi, D. (2024).
-        </div>
-        <div class="title">
+ </div>
+ <div class="title">
             The Middle Pleistocene human metatarsal from Sedia del Diavolo (Rome, Italy).
-        </div>
-        <div class="journal">
+ </div>
+ <div class="journal">
             Scientific Reports, 14, 6024.
-        </div>
-        <div class="doi">
-            <a href="https://doi.org/10.1038/s41598-024-55045-1" target="_blank">
+ </div>
+ <div class="doi">
+ <a href="https://doi.org/10.1038/s41598-024-55045-1" target="_blank">
                 DOI: 10.1038/s41598-024-55045-1
-            </a>
-        </div>
-    </div>
+ </a>
+ </div>
+ </div>
 
-    <div class="publication">
-        <div class="authors">
+
+ <div class="publication">
+ <div class="authors">
             Adámková, I., Ševčík, R., Machotová, J., Zárybnická, L., Mácová, P., Mancini, L., Viani, A. (2024).
-        </div>
-        <div class="title">
+ </div>
+ <div class="title">
             Efficacy of polyacrylate latex nanodispersions as consolidation agents in porous sandstones evaluated by synchrotron X-ray computed microtomography.
-        </div>
-        <div class="journal">
+ </div>
+ <div class="journal">
             Journal of Building Engineering, 87, 109089.
-        </div>
-        <div class="doi">
-            <a href="https://doi.org/10.1016/j.jobe.2024.109089" target="_blank">
+ </div>
+ <div class="doi">
+ <a href="https://doi.org/10.1016/j.jobe.2024.109089" target="_blank">
                 DOI: 10.1016/j.jobe.2024.109089
-            </a>
-        </div>
-    </div>
+ </a>
+ </div>
+ </div>
 
-    <div class="publication">
-        <div class="authors">
+
+ <div class="publication">
+ <div class="authors">
             Bernasconi, A., Marinoni, N., Mancini, L., Voltolini, M., Francescon, F., Sartori, R., Pavese, A. (2024).
-        </div>
-        <div class="title">
+ </div>
+ <div class="title">
             Effects of different China and ball clays on traditional ceramic process: A multi-methodological approach.
-        </div>
-        <div class="journal">
+ </div>
+ <div class="journal">
             Applied Clay Science, 262, 107587.
-        </div>
-        <div class="doi">
-            <a href="https://doi.org/10.1016/j.clay.2024.107587" target="_blank">
+ </div>
+ <div class="doi">
+ <a href="https://doi.org/10.1016/j.clay.2024.107587" target="_blank">
                 DOI: 10.1016/j.clay.2024.107587
-            </a>
-        </div>
-    </div>
+ </a>
+ </div>
+ </div>
 
-    <div class="publication">
-        <div class="authors">
+
+ <div class="publication">
+ <div class="authors">
             Forel, M.-B., Poulet-Crovisier, N., Korat Bensa, L., Maddocks, R. F. (2024).
-        </div>
-        <div class="title">
+ </div>
+ <div class="title">
             Ornate Bairdiidae (Ostracoda) in 3 dimensions: exploring carapace morphology and pore canals of Triebelina van den Bold, 1946, Nodobairdia Kollmann, 1963 and Mirabairdia Kollmann, 1963.
-        </div>
-        <div class="journal">
+ </div>
+ <div class="journal">
             Comptes Rendus Palévol, 23(11), 137–159.
-        </div>
-        <div class="doi">
-            <a href="https://doi.org/10.5852/cr-palevol2024v23a11" target="_blank">
+ </div>
+ <div class="doi">
+ <a href="https://doi.org/10.5852/cr-palevol2024v23a11" target="_blank">
                 DOI: 10.5852/cr-palevol2024v23a11
-            </a>
-        </div>
-    </div>
+ </a>
+ </div>
+ </div>
 
-    <div class="publication">
-        <div class="authors">
+
+ <div class="publication">
+ <div class="authors">
             Pavlin, M., Horvat, B., Cerc Korošec, R., Capuder, R., Korat Bensa, L., Ducman, V. (2024).
-        </div>
-        <div class="title">
+ </div>
+ <div class="title">
             Characterisation of a 3D-printed alkali-activated material based on waste mineral wool at room and elevated temperatures.
-        </div>
-        <div class="journal">
+ </div>
+ <div class="journal">
             Cement and Concrete Composites, 147, 105445.
-        </div>
-        <div class="doi">
-            <a href="https://doi.org/10.1016/j.cemconcomp.2024.105445" target="_blank">
+ </div>
+ <div class="doi">
+ <a href="https://doi.org/10.1016/j.cemconcomp.2024.105445" target="_blank">
                 DOI: 10.1016/j.cemconcomp.2024.105445
-            </a>
-        </div>
-    </div>
+ </a>
+ </div>
+ </div>
 
-    <div class="publication">
-        <div class="authors">
+
+ <div class="publication">
+ <div class="authors">
             Hren, M., Kosec, T., Legat, A. (2024).
-        </div>
-        <div class="title">
+ </div>
+ <div class="title">
             An investigation into corrosion around voids at the steel-concrete interface.
-        </div>
-        <div class="journal">
+ </div>
+ <div class="journal">
             Cement and Concrete Research, 181, 107545.
-        </div>
-        <div class="doi">
-            <a href="https://doi.org/10.1016/j.cemconres.2024.107545" target="_blank">
+ </div>
+ <div class="doi">
+ <a href="https://doi.org/10.1016/j.cemconres.2024.107545" target="_blank">
                 DOI: 10.1016/j.cemconres.2024.107545
-            </a>
-        </div>
-    </div>
+ </a>
+ </div>
+ </div>
 
-    <div class="publication">
-        <div class="authors">
+
+ <div class="publication">
+ <div class="authors">
             Bajt Leban, M., Zajec, B., Podgornik, B., Donik, Č., Jovičević-Klug, P., Hren, M., Legat, A. (2024).
-        </div>
-        <div class="title">
+ </div>
+ <div class="title">
             Susceptibility of X17CrNi16-2 martensitic stainless steel to hydrogen embrittlement after conventional and deep cryogenic heat treatment.
-        </div>
-        <div class="journal">
+ </div>
+ <div class="journal">
             Engineering Failure Analysis, 162, 108403.
-        </div>
-        <div class="doi">
-            <a href="https://doi.org/10.1016/j.engfailanal.2024.108403" target="_blank">
+ </div>
+ <div class="doi">
+ <a href="https://doi.org/10.1016/j.engfailanal.2024.108403" target="_blank">
                 DOI: 10.1016/j.engfailanal.2024.108403
-            </a>
-        </div>
-    </div>
+ </a>
+ </div>
+ </div>
 
 
-    <h2 class="year" style="margin-top: 55px;">2023</h2>
 
-    <div class="publication">
-        <div class="authors">
+
+ <h2 class="year" style="margin-top: 55px;">2023</h2>
+
+
+ <div class="publication">
+ <div class="authors">
             Vinci, G., Fontana, A., Musina, G., Mancini, L., Lubritto, C., Liccioli, L., Bernardini, F. (2023).
-        </div>
-        <div class="title">
+ </div>
+ <div class="title">
             Beached swords from Marano Lagoon (northern Adriatic) reveal ancient land–sea connections and recent coastal evolution.
-        </div>
-        <div class="journal">
+ </div>
+ <div class="journal">
             Archaeometry, 65(2), 299–318.
-        </div>
-        <div class="doi">
-            <a href="https://doi.org/10.1111/arcm.12833" target="_blank">
+ </div>
+ <div class="doi">
+ <a href="https://doi.org/10.1111/arcm.12833" target="_blank">
                 DOI: 10.1111/arcm.12833
-            </a>
-        </div>
-    </div>
+ </a>
+ </div>
+ </div>
 
-    <div class="publication">
-        <div class="authors">
+
+ <div class="publication">
+ <div class="authors">
             Bozzini, B., Boniardi, M., Caielli, T., Casaroli, A., Emanuele, E., Mancini, L., Sodini, N., Strada, J. (2023).
-        </div>
-        <div class="title">
+ </div>
+ <div class="title">
             Electrochemical Cycling Behaviour and Shape Changes of Zn Electrodes in Mildly Acidic Aqueous Electrolytes Containing Quaternary Ammonium Salts.
-        </div>
-        <div class="journal">
+ </div>
+ <div class="journal">
             ChemElectroChem, 10, e202201130.
-        </div>
-        <div class="doi">
-            <a href="https://doi.org/10.1002/celc.202201130" target="_blank">
+ </div>
+ <div class="doi">
+ <a href="https://doi.org/10.1002/celc.202201130" target="_blank">
                 DOI: 10.1002/celc.202201130
-            </a>
-        </div>
-    </div>
+ </a>
+ </div>
+ </div>
 
-    <div class="publication">
-        <div class="authors">
+
+ <div class="publication">
+ <div class="authors">
             Raneri, S., Mancini, L., Lanzafame, G., Kao, A. P., Giannoukos, K., Malladi, R. C., Kumar, M. S., Palleschi, V., Selvaraj, T. (2023).
-        </div>
-        <div class="title">
+ </div>
+ <div class="title">
             From ancient lime mortar recipes to organic laboratory replicas: Interpreting forced carbonation through 3D microstructural architecture.
-        </div>
-        <div class="journal">
+ </div>
+ <div class="journal">
             Journal of Building Engineering, 78, 107754.
-        </div>
-        <div class="doi">
-            <a href="https://doi.org/10.1016/j.jobe.2023.107754" target="_blank">
+ </div>
+ <div class="doi">
+ <a href="https://doi.org/10.1016/j.jobe.2023.107754" target="_blank">
                 DOI: 10.1016/j.jobe.2023.107754
-            </a>
-        </div>
-    </div>
+ </a>
+ </div>
+ </div>
 
-    <div class="publication">
-        <div class="authors">
+
+ <div class="publication">
+ <div class="authors">
             Colle, F., Masotta, M., Costa, S., Mollo, S., Landi, P., Pontesilli, A., Peres, S., Mancini, L. (2023).
-        </div>
-        <div class="title">
+ </div>
+ <div class="title">
             Effect of undercooling on clinopyroxene crystallization in a high K basalt: Implications for magma dynamics at Stromboli volcano.
-        </div>
-        <div class="journal">
+ </div>
+ <div class="journal">
             Lithos, 456–457, 107327.
-        </div>
-        <div class="doi">
-            <a href="https://doi.org/10.1016/j.lithos.2023.107327" target="_blank">
+ </div>
+ <div class="doi">
+ <a href="https://doi.org/10.1016/j.lithos.2023.107327" target="_blank">
                 DOI: 10.1016/j.lithos.2023.107327
-            </a>
-        </div>
-    </div>
+ </a>
+ </div>
+ </div>
 
-    <div class="publication">
-        <div class="authors">
+
+ <div class="publication">
+ <div class="authors">
             Gaspari, A., Germek, D., Jelinčič, A., Hren, M., Korat Bensa, L., Frka, D., et al. (2023).
-        </div>
-        <div class="title">
+ </div>
+ <div class="title">
             Enigma M4 cipher machine from the wreck of the German minesweeper R 15 near Umag.
-        </div>
-        <div class="journal">
+ </div>
+ <div class="journal">
             Annales: Series Historia et Sociologia, 33(1), 1–30.
-        </div>
-        <div class="doi">
-            <a href="https://doi.org/10.19233/ASHS.2023.01" target="_blank">
+ </div>
+ <div class="doi">
+ <a href="https://doi.org/10.19233/ASHS.2023.01" target="_blank">
                 DOI: 10.19233/ASHS.2023.01
-            </a>
-        </div>
-    </div>
+ </a>
+ </div>
+ </div>
 
-    <div class="publication">
-        <div class="authors">
+
+ <div class="publication">
+ <div class="authors">
             Hren, M., Kosec, T., Legat, A. (2023).
-        </div>
-        <div class="title">
+ </div>
+ <div class="title">
             Characterization of steel corrosion processes in various blended cements by means of coupled multi-electrode arrays.
-        </div>
-        <div class="journal">
+ </div>
+ <div class="journal">
             Cement and Concrete Research, 168, 107134.
-        </div>
-        <div class="doi">
-            <a href="https://doi.org/10.1016/j.cemconres.2023.107134" target="_blank">
+ </div>
+ <div class="doi">
+ <a href="https://doi.org/10.1016/j.cemconres.2023.107134" target="_blank">
                 DOI: 10.1016/j.cemconres.2023.107134
-            </a>
-        </div>
-    </div>
+ </a>
+ </div>
+ </div>
 
-    <div class="publication">
-        <div class="authors">
+
+ <div class="publication">
+ <div class="authors">
             Bajt Leban, M., Hren, M., Kosec, T. (2023).
-        </div>
-        <div class="title">
+ </div>
+ <div class="title">
             The microstructure, mechanical and electrochemical properties of 3D printed alloys with reusing powders.
-        </div>
-        <div class="journal">
+ </div>
+ <div class="journal">
             Scientific Reports, 13, 3245.
-        </div>
-        <div class="doi">
-            <a href="https://doi.org/10.1038/s41598-023-28971-9" target="_blank">
+ </div>
+ <div class="doi">
+ <a href="https://doi.org/10.1038/s41598-023-28971-9" target="_blank">
                 DOI: 10.1038/s41598-023-28971-9
-            </a>
-        </div>
-    </div>
+ </a>
+ </div>
+ </div>
 
 
-    <h2 class="year" style="margin-top: 55px;">2022</h2>
 
-    <div class="publication">
-        <div class="authors">
+
+ <h2 class="year" style="margin-top: 55px;">2022</h2>
+
+
+ <div class="publication">
+ <div class="authors">
             Soldati, E., Roseren, F., Guenoun, D., Mancini, L., Catelli, E., Prati, S., Sciutto, G., Vicente, J., Iotti, S., Bendahan, D., Malucelli, E., Pithioux, M. (2022).
-        </div>
-        <div class="title">
+ </div>
+ <div class="title">
             Multiscale Femoral Neck Imaging and Multimodal Trabeculae Quality Characterization in an Osteoporotic Bone Sample.
-        </div>
-        <div class="journal">
+ </div>
+ <div class="journal">
             Materials, 15(22), 8048.
-        </div>
-        <div class="doi">
-            <a href="https://doi.org/10.3390/ma15228048" target="_blank">
+ </div>
+ <div class="doi">
+ <a href="https://doi.org/10.3390/ma15228048" target="_blank">
                 DOI: 10.3390/ma15228048
-            </a>
-        </div>
-    </div>
+ </a>
+ </div>
+ </div>
 
-    <div class="publication">
-        <div class="authors">
+
+ <div class="publication">
+ <div class="authors">
             Avian, M., Mancini, L., Voltolini, M., Bonnet, D., Dreossi, D., Macaluso, V., Pillepich, N., Prieto, L., Ramšak, A., Terlizzi, A., et al. (2022).
-        </div>
-        <div class="title">
+ </div>
+ <div class="title">
             A novel endocast technique providing a 3D quantitative analysis of the gastrovascular system in Rhizostoma pulmo: An unexpected through-gut in cnidaria.
-        </div>
-        <div class="journal">
+ </div>
+ <div class="journal">
             PLOS ONE, 17(8), e0272023.
-        </div>
-        <div class="doi">
-            <a href="https://doi.org/10.1371/journal.pone.0272023" target="_blank">
+ </div>
+ <div class="doi">
+ <a href="https://doi.org/10.1371/journal.pone.0272023" target="_blank">
                 DOI: 10.1371/journal.pone.0272023
-            </a>
-        </div>
-    </div>
+ </a>
+ </div>
+ </div>
 
-    <div class="publication">
-        <div class="authors">
+
+ <div class="publication">
+ <div class="authors">
             Ranc, N., Messager, A., Junet, A., Palin-Luc, T., Buffière, J.-Y., Saintier, N., Elmay, M., Mancini, L., King, A., Nadot, Y. (2022).
-        </div>
-        <div class="title">
+ </div>
+ <div class="title">
             Internal fatigue crack monitoring during ultrasonic fatigue test using temperature measurements and tomography.
-        </div>
-        <div class="journal">
+ </div>
+ <div class="journal">
             Mechanics of Materials, 174, 104471.
-        </div>
-        <div class="doi">
-            <a href="https://doi.org/10.1016/j.mechmat.2022.104471" target="_blank">
+ </div>
+ <div class="doi">
+ <a href="https://doi.org/10.1016/j.mechmat.2022.104471" target="_blank">
                 DOI: 10.1016/j.mechmat.2022.104471
-            </a>
-        </div>
-    </div>
+ </a>
+ </div>
+ </div>
 
-    <div class="publication">
-        <div class="authors">
+
+ <div class="publication">
+ <div class="authors">
             Vazzana, A., Higgins, O. A., Oxilia, G., Lugli, F., Silvestrini, S., Nava, A., Bondioli, L., Bortolini, E., Di Domenico, G., Bernardini, F., Tuniz, C., Mancini, L., Bettuzzi, M., Morigi, M. P., Piperno, M., Collina, C., Romandini, M., Benazzi, S. (2022).
-        </div>
-        <div class="title">
+ </div>
+ <div class="title">
             High-accuracy methodology for the integrative restoration of archaeological teeth by using reverse engineering techniques and rapid prototyping.
-        </div>
-        <div class="journal">
+ </div>
+ <div class="journal">
             Journal of Archaeological Science: Reports, 44, 103511.
-        </div>
-        <div class="doi">
-            <a href="https://doi.org/10.1016/j.jasrep.2022.103511" target="_blank">
+ </div>
+ <div class="doi">
+ <a href="https://doi.org/10.1016/j.jasrep.2022.103511" target="_blank">
                 DOI: 10.1016/j.jasrep.2022.103511
-            </a>
-        </div>
-    </div>
+ </a>
+ </div>
+ </div>
 
-    <div class="publication">
-        <div class="authors">
+
+ <div class="publication">
+ <div class="authors">
             Bozzini, B., Bagheri, S., Boniardi, M., Mancini, L., Marini, E., Sgura, I., Mele, C. (2022).
-        </div>
-        <div class="title">
+ </div>
+ <div class="title">
             Quantifying and rationalizing polarization curves of Zn-air fuel-cells: A simple enabling contribution to device-scale analysis and monitoring.
-        </div>
-        <div class="journal">
+ </div>
+ <div class="journal">
             Electrochimica Acta, 425, 140712.
-        </div>
-        <div class="doi">
-            <a href="https://doi.org/10.1016/j.electacta.2022.140712" target="_blank">
+ </div>
+ <div class="doi">
+ <a href="https://doi.org/10.1016/j.electacta.2022.140712" target="_blank">
                 DOI: 10.1016/j.electacta.2022.140712
-            </a>
-        </div>
-    </div>
+ </a>
+ </div>
+ </div>
 
-    <div class="publication">
-        <div class="authors">
+
+ <div class="publication">
+ <div class="authors">
             Guček Puhar, E., Korat Bensa, L., Erič, M., Jaklič, A., Solina, F. (2022).
-        </div>
-        <div class="title">
+ </div>
+ <div class="title">
             Microtomographic analysis of a Palaeolithic wooden point from the Ljubljanica River.
-        </div>
-        <div class="journal">
+ </div>
+ <div class="journal">
             Sensors, 22(6), 2369.
-        </div>
-        <div class="doi">
-            <a href="https://doi.org/10.3390/s22062369" target="_blank">
+ </div>
+ <div class="doi">
+ <a href="https://doi.org/10.3390/s22062369" target="_blank">
                 DOI: 10.3390/s22062369
-            </a>
-        </div>
-    </div>
+ </a>
+ </div>
+ </div>
 
 
-    <h2 class="year" style="margin-top: 55px;">2021</h2>
 
-    <div class="publication">
-        <div class="authors">
+
+ <h2 class="year" style="margin-top: 55px;">2021</h2>
+
+
+ <div class="publication">
+ <div class="authors">
             Guček Puhar, E., Jaklič, A., Solina, F., Korat Bensa, L., Erič, M. (2021).
-        </div>
-        <div class="title">
+ </div>
+ <div class="title">
             Anatomical-morphological analysis of a volumetric 3D model of an archaeological object.
-        </div>
-        <div class="journal">
+ </div>
+ <div class="journal">
             Archeologia e Calcolatori, 32.2, 197–208.
-        </div>
-        <div class="doi">
-            <a href="https://doi.org/10.19282/ac.32.2.2021.18" target="_blank">
+ </div>
+ <div class="doi">
+ <a href="https://doi.org/10.19282/ac.32.2.2021.18" target="_blank">
                 DOI: 10.19282/ac.32.2.2021.18
-            </a>
-        </div>
-    </div>
+ </a>
+ </div>
+ </div>
+
 
 </section>
+
 
 <footer>
     3DXIM — Advanced X-ray Imaging
 </footer>
+
 
 </body>
 </html>

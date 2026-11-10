@@ -1,300 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team | 3DXIM</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Team | 3DXIM</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:Arial,sans-serif; color:#222; background:white; line-height:1.6; }
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            color: #222;
-            background: white;
-            line-height: 1.6;
-        }
-
+        body { padding-top: 82px; }
         nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 24px 7%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            height: 82px;
+            padding: 0;
             background: #111;
             color: white;
         }
-
+        .nav-inner {
+            width: 80%;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
         .logo a {
             color: white;
             text-decoration: none;
             font-size: 30px;
-            font-weight: bold;
+            font-weight: 700;
             letter-spacing: 2px;
-            margin-left: 0;
+            margin: 0;
         }
-
-        nav a {
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            white-space: nowrap;
+        }
+        .nav-links a {
             color: white;
             text-decoration: none;
-            margin-left: 28px;
-            font-size: 15px;
+            margin: 0;
+            font-size: 16.5px;
+            font-weight: 400;
+            line-height: 1;
+            transition: opacity 0.2s ease;
         }
-
-        nav a:hover {
-            opacity: 0.7;
-        }
-
+        .nav-links a:hover { opacity: 0.72; }
         .nav-links a.active {
-            font-weight: 700;
-            font-size: 16px;
+            font-size: 16.5px;
+            font-weight: 800;
+            opacity: 1;
         }
 
-        .hero {
-            padding: 110px 10%;
-            background: #f0f2f3;
-        }
+.hero { padding:110px 10%; background:#f0f2f3; }
+.hero h1 { font-size:58px; line-height:1.1; margin-bottom:20px; }
+.hero p { max-width:780px; font-size:20px; color:#666; }
+section { padding:90px 10%; }
+.section-title { font-size:40px; margin-bottom:18px; }
+.section-intro { max-width:800px; color:#666; font-size:18px; margin-bottom:50px; }
+.team-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:38px 30px; align-items:start; }
+.member { background:transparent; text-align:center; }
+.member-trigger { border:0; background:transparent; color:inherit; cursor:pointer; font:inherit; }
+.photo-trigger { display:block; width:200px; height:200px; margin:0 auto; border-radius:50%; }
+.member-photo { width:200px; height:200px; object-fit:cover; object-position:center 25%; display:block; border-radius:50%; transition:transform .3s ease,box-shadow .3s ease; }
+.member:hover .member-photo,.member.active .member-photo,.photo-trigger:focus-visible .member-photo { transform:scale(1.12); box-shadow:0 12px 28px rgba(0,0,0,.18); }
+.member-info { padding:24px 8px 0; }
+.name-trigger { font-size:23px; font-weight:700; line-height:1.25; text-decoration:none; }
+.name-trigger:hover,.name-trigger:focus-visible,.member.active .name-trigger { color:#2f6f8f; }
+.member-trigger:focus-visible { outline:3px solid #2f6f8f; outline-offset:5px; }
+.position { color:#666; font-size:16px; margin-top:7px; }
+.profile-panel { display:none; grid-column:1/-1; width:50%; justify-self:center; background:#f0f2f3; border-left:4px solid #2f6f8f; padding:32px 36px; margin:2px 0 12px; text-align:left; }
+.profile-panel.active { display:block; animation:revealProfile .25s ease; }
+.profile-panel h3 { font-size:28px; line-height:1.2; margin-bottom:4px; }
+.profile-panel .position { margin:0 0 16px; }
+.profile-panel p { color:#555; font-size:16px; }
+@keyframes revealProfile { from {opacity:0;transform:translateY(-8px)} to {opacity:1;transform:translateY(0)} }
+footer { padding:35px 10%; background:#090909; color:#aaa; font-size:14px; }
+@media(max-width:1050px) { .team-grid {grid-template-columns:repeat(2,minmax(0,1fr));} .profile-panel {width:75%;} }
+@media(max-width:700px) { .hero{padding:80px 7%;} .hero h1{font-size:42px;} section{padding:70px 7%;} .section-title{font-size:34px;} .team-grid{grid-template-columns:1fr;} .profile-panel{width:100%;padding:26px 22px;} }
 
-        .hero h1 {
-            font-size: 58px;
-            line-height: 1.1;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            max-width: 780px;
-            font-size: 20px;
-            color: #666;
-        }
-
-        section {
-            padding: 90px 10%;
-        }
-
-        .section-title {
-            font-size: 40px;
-            margin-bottom: 18px;
-        }
-
-        .section-intro {
-            max-width: 800px;
-            color: #666;
-            font-size: 18px;
-            margin-bottom: 50px;
-        }
-
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(4, minmax(0, 1fr));
-            gap: 38px 30px;
-            align-items: start;
-        }
-
-        .member {
-            background: transparent;
-            text-align: center;
-        }
-
-        .member-trigger {
-            border: 0;
-            background: transparent;
-            color: inherit;
-            cursor: pointer;
-            font: inherit;
-        }
-
-        .photo-trigger {
-            display: block;
-            width: 200px;
-            height: 200px;
-            margin: 0 auto;
-            border-radius: 50%;
-        }
-
-        .member-photo {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            object-position: center 25%;
-            display: block;
-            border-radius: 50%;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .member:hover .member-photo,
-        .member.active .member-photo,
-        .photo-trigger:focus-visible .member-photo {
-            transform: scale(1.12);
-            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
-        }
-
-        .member-info {
-            padding: 24px 8px 0;
-        }
-
-        .name-trigger {
-            font-size: 23px;
-            font-weight: 700;
-            line-height: 1.25;
-            text-decoration: none;
-        }
-
-        .name-trigger:hover,
-        .name-trigger:focus-visible,
-        .member.active .name-trigger {
-            color: #2f6f8f;
-        }
-
-        .member-trigger:focus-visible {
-            outline: 3px solid #2f6f8f;
-            outline-offset: 5px;
-        }
-
-        .position {
-            color: #666;
-            font-size: 16px;
-            margin-top: 7px;
-        }
-
-        .profile-panel {
-            display: none;
-            grid-column: 1 / -1;
-            width: 50%;
-            justify-self: center;
-            background: #f0f2f3;
-            border-left: 4px solid #2f6f8f;
-            padding: 32px 36px;
-            margin: 2px 0 12px;
-            text-align: left;
-        }
-
-        .profile-panel.active {
-            display: block;
-            animation: revealProfile 0.25s ease;
-        }
-
-        .profile-panel h3 {
-            font-size: 28px;
-            line-height: 1.2;
-            margin-bottom: 4px;
-        }
-
-        .profile-panel .position {
-            margin: 0 0 16px;
-        }
-
-        .profile-panel p {
-            max-width: 1000px;
-            color: #555;
-            font-size: 16px;
-        }
-
-        @keyframes revealProfile {
-            from {
-                opacity: 0;
-                transform: translateY(-8px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        footer {
-            padding: 35px 10%;
-            background: #090909;
-            color: #aaa;
-            font-size: 14px;
-        }
-
-        @media (max-width: 900px) {
-            .profile-panel {
-                width: 75%;
-            }
-
-            .team-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
-        }
-
-        @media (max-width: 700px) {
-            nav {
+        @media (max-width: 1050px) {
+            body { padding-top: 126px; }
+            nav { height: 126px; }
+            .nav-inner {
+                width: 86%;
                 flex-direction: column;
                 align-items: flex-start;
-                gap: 18px;
+                justify-content: center;
+                gap: 12px;
             }
-
-            .nav-links a {
-                display: inline-block;
-                margin-left: 0;
-                margin-right: 18px;
-                margin-bottom: 8px;
-            }
-
-            .hero {
-                padding: 80px 7%;
-            }
-
-            .hero h1 {
-                font-size: 42px;
-            }
-
-            section {
-                padding: 70px 7%;
-            }
-
-            .section-title {
-                font-size: 34px;
-            }
-
-            .team-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .profile-panel {
+            .nav-links {
                 width: 100%;
-                padding: 26px 22px;
+                gap: 0;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                row-gap: 10px;
             }
+            .nav-links a { font-size: 15px; }
+            .nav-links a.active { font-size: 15px; }
         }
-    </style>
-</head>
+        @media (max-width: 700px) {
+            body { padding-top: 166px; }
+            nav { height: 166px; }
+            .nav-inner { width: 86%; }
+            .nav-links { justify-content: flex-start; gap: 10px 18px; }
+        }
 
+</style>
+</head>
 <body>
 <nav>
-    <div class="logo">
-        <a href="index.html">3DXIM</a>
-    </div>
-
-    <div class="nav-links">
-        <a href="index.html">About</a>
-        <a href="facilities.html">Facilities</a>
-        <a href="research.html">Research</a>
-        <a href="use-cases.html">Use Cases</a>
-        <a href="team.html" class="active">Team</a>
-        <a href="publications.html">Publications</a>
-        <a href="index.html#contact">Contact</a>
+    <div class="nav-inner">
+        <div class="logo"><a href="index.html">3DXIM</a></div>
+        <div class="nav-links">
+            <a href="index.html">About</a>
+            <a href="facilities.html">Facilities</a>
+            <a href="research.html">Research</a>
+            <a href="use-cases.html">Use Cases</a>
+            <a href="team.html" class="active">Team</a>
+            <a href="publications.html">Publications</a>
+            <a href="news.html">News</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
     </div>
 </nav>
-
-<div class="hero">
-    <h1>Our Team</h1>
-    <p>
-        Meet the researchers and specialists working across X-ray imaging,
-        computed tomography, image analysis, and materials characterization.
-    </p>
-</div>
-
+<div class="hero"><h1>Our Team</h1><p>Meet the researchers and specialists working across X-ray imaging, computed tomography, image analysis, and materials characterization.</p></div>
 <section>
-    <h2 class="section-title">People</h2>
-    <p class="section-intro">
-        Our multidisciplinary team combines expertise in imaging, materials
-        science, engineering, data processing, and quantitative analysis.
-    </p>
-
-    <div class="team-grid" id="teamGrid">
+<h2 class="section-title">People</h2>
+<p class="section-intro">Our multidisciplinary team combines expertise in imaging, materials science, engineering, data processing, and quantitative analysis.</p>
+<div class="team-grid" id="teamGrid">
         <article class="member" data-member="miha" data-name="Miha Hren" data-position="Researcher" data-bio="Miha is a ...">
             <button class="member-trigger photo-trigger" type="button" aria-expanded="false" aria-controls="profilePanel">
                 <img src="Miha.jpeg" alt="Miha Hren" class="member-photo">
@@ -304,7 +144,6 @@
                 <div class="position">Researcher</div>
             </div>
         </article>
-
         <article class="member" data-member="lucia" data-name="Lucia Mancini" data-position="Senior Researcher" data-bio="Lucia is ....">
             <button class="member-trigger photo-trigger" type="button" aria-expanded="false" aria-controls="profilePanel">
                 <img src="Lucia.jpeg" alt="Lucia Mancini" class="member-photo">
@@ -314,7 +153,6 @@
                 <div class="position">Senior Researcher</div>
             </div>
         </article>
-
         <article class="member" data-member="lidija" data-name="Lidija Korat" data-position="Researcher" data-bio="Lidija is a ...">
             <button class="member-trigger photo-trigger" type="button" aria-expanded="false" aria-controls="profilePanel">
                 <img src="Lidija.jpeg" alt="Lidija Korat" class="member-photo">
@@ -324,7 +162,6 @@
                 <div class="position">Researcher</div>
             </div>
         </article>
-
         <article class="member" data-member="alenka" data-name="Alenka Mauko Pranjić" data-position="Senior Researcher" data-bio="Alenka is a ...">
             <button class="member-trigger photo-trigger" type="button" aria-expanded="false" aria-controls="profilePanel">
                 <img src="Alenka.jpeg" alt="Alenka Mauko Pranjić" class="member-photo">
@@ -334,7 +171,6 @@
                 <div class="position">Senior Researcher</div>
             </div>
         </article>
-
         <article class="member" data-member="rozle" data-name="Rožle Repič" data-position="Researcher" data-bio="Rožle is a ...">
             <button class="member-trigger photo-trigger" type="button" aria-expanded="false" aria-controls="profilePanel">
                 <img src="Rozle.jpeg" alt="Rožle Repič" class="member-photo">
@@ -344,7 +180,6 @@
                 <div class="position">Researcher</div>
             </div>
         </article>
-
         <article class="member" data-member="tommaso" data-name="Tommaso Battiston" data-position="Researcher" data-bio="Tommaso is a ...">
             <button class="member-trigger photo-trigger" type="button" aria-expanded="false" aria-controls="profilePanel">
                 <img src="Tommaso.jpeg" alt="Tommaso Battiston" class="member-photo">
@@ -354,7 +189,6 @@
                 <div class="position">Researcher</div>
             </div>
         </article>
-
         <article class="member" data-member="ekaterina" data-name="Ekaterina Sokolova" data-position="Doctoral Candidate" data-bio="Ekaterina is a PhD student with a background in archaeological sciences, specializing in the scientific study and conservation of cultural heritage materials. Her current research focuses on the optimization and characterization of sustainable materials for cultural heritage conservation, particularly for injection and additive manufacturing applications. She uses X-ray computed tomography as a non-destructive, quantitative technique to investigate internal structure, porosity, cracking, and material behaviour. Her research interests include archaeological and heritage materials, advanced X-ray characterization, 3D imaging, sustainable conservation, and additive manufacturing for the restoration of cultural heritage objects.">
             <button class="member-trigger photo-trigger" type="button" aria-expanded="false" aria-controls="profilePanel">
                 <img src="Ekaterina.jpeg" alt="Ekaterina Sokolova" class="member-photo">
@@ -364,7 +198,6 @@
                 <div class="position">Doctoral Candidate</div>
             </div>
         </article>
-
         <article class="member" data-member="amir" data-name="Amir Reza Zekavat" data-position="Postdoctoral Researcher" data-bio="Amir is an X-ray imaging engineer working at the Department of Materials at the Slovenian National Building and Civil Engineering Institute (ZAG) since May 2025. After completing a master's degree in mechanical engineering in Sweden in 2013, he completed his PhD studies at Örebro University, Sweden, in 2019. During his doctoral studies, he worked on dimensional metrology, surface characterization, and defect analysis of additively manufactured components using X-ray computed tomography (CT). Following his PhD, he worked as a Postdoctoral Research Associate at University College London (UCL), UK, from 2021 to 2023 in the Advanced X-ray Imaging (AXIm) group within the Department of Medical Physics and Biomedical Engineering. His research focused on state-of-the-art X-ray phase-contrast imaging (XPCI), including CT scanning, reconstruction, and analysis of 3D CT datasets.">
             <button class="member-trigger photo-trigger" type="button" aria-expanded="false" aria-controls="profilePanel">
                 <img src="Zekavat.jpeg" alt="Amir Reza Zekavat" class="member-photo">
@@ -374,8 +207,6 @@
                 <div class="position">Postdoctoral Researcher</div>
             </div>
         </article>
-
-        <!-- Replace these three placeholders with the new members' details and image filenames. -->
         <article class="member" data-member="new-member-1" data-name="New Member 1" data-position="Position" data-bio="Add profile text here.">
             <button class="member-trigger photo-trigger" type="button" aria-expanded="false" aria-controls="profilePanel">
                 <img src="member1.jpeg" alt="New Member 1" class="member-photo">
@@ -385,7 +216,6 @@
                 <div class="position">Position</div>
             </div>
         </article>
-
         <article class="member" data-member="new-member-2" data-name="New Member 2" data-position="Position" data-bio="Add profile text here.">
             <button class="member-trigger photo-trigger" type="button" aria-expanded="false" aria-controls="profilePanel">
                 <img src="member2.jpeg" alt="New Member 2" class="member-photo">
@@ -395,7 +225,6 @@
                 <div class="position">Position</div>
             </div>
         </article>
-
         <article class="member" data-member="new-member-3" data-name="New Member 3" data-position="Position" data-bio="Add profile text here.">
             <button class="member-trigger photo-trigger" type="button" aria-expanded="false" aria-controls="profilePanel">
                 <img src="member3.jpeg" alt="New Member 3" class="member-photo">
@@ -405,78 +234,23 @@
                 <div class="position">Position</div>
             </div>
         </article>
-
-        <div class="profile-panel" id="profilePanel" aria-live="polite">
-            <h3 id="profileName"></h3>
-            <div class="position" id="profilePosition"></div>
-            <p id="profileBio"></p>
-        </div>
-    </div>
+        <div class="profile-panel" id="profilePanel" aria-live="polite"><h3 id="profileName"></h3><div class="position" id="profilePosition"></div><p id="profileBio"></p></div>
+</div>
 </section>
-
-<footer>
-    3DXIM — Advanced X-ray Imaging
-</footer>
-
+<footer>3DXIM — Advanced X-ray Imaging</footer>
 <script>
-    const grid = document.getElementById('teamGrid');
-    const members = [...grid.querySelectorAll('.member')];
-    const panel = document.getElementById('profilePanel');
-    const profileName = document.getElementById('profileName');
-    const profilePosition = document.getElementById('profilePosition');
-    const profileBio = document.getElementById('profileBio');
-    let openMember = null;
-
-    function columnCount() {
-        return getComputedStyle(grid).gridTemplateColumns.split(' ').length;
-    }
-
-    function closeProfile() {
-        members.forEach(member => {
-            member.classList.remove('active');
-            member.querySelectorAll('.member-trigger').forEach(trigger => {
-                trigger.setAttribute('aria-expanded', 'false');
-            });
-        });
-        panel.classList.remove('active');
-        openMember = null;
-    }
-
-    function openProfile(member) {
-        closeProfile();
-
-        profileName.textContent = member.dataset.name;
-        profilePosition.textContent = member.dataset.position;
-        profileBio.textContent = member.dataset.bio;
-
-        member.classList.add('active');
-        member.querySelectorAll('.member-trigger').forEach(trigger => {
-            trigger.setAttribute('aria-expanded', 'true');
-        });
-
-        const columns = columnCount();
-        const index = members.indexOf(member);
-        const rowEndIndex = Math.min(Math.ceil((index + 1) / columns) * columns, members.length) - 1;
-        members[rowEndIndex].after(panel);
-        panel.classList.add('active');
-        openMember = member;
-    }
-
-    grid.addEventListener('click', event => {
-        const trigger = event.target.closest('.member-trigger');
-        if (!trigger) return;
-
-        const member = trigger.closest('.member');
-        if (openMember === member) {
-            closeProfile();
-        } else {
-            openProfile(member);
-        }
-    });
-
-    window.addEventListener('resize', () => {
-        if (openMember) openProfile(openMember);
-    });
+const grid=document.getElementById('teamGrid');
+const members=[...grid.querySelectorAll('.member')];
+const panel=document.getElementById('profilePanel');
+const profileName=document.getElementById('profileName');
+const profilePosition=document.getElementById('profilePosition');
+const profileBio=document.getElementById('profileBio');
+let openMember=null;
+function columnCount(){return getComputedStyle(grid).gridTemplateColumns.split(' ').length;}
+function closeProfile(){members.forEach(member=>{member.classList.remove('active');member.querySelectorAll('.member-trigger').forEach(trigger=>trigger.setAttribute('aria-expanded','false'));});panel.classList.remove('active');openMember=null;}
+function openProfile(member){closeProfile();profileName.textContent=member.dataset.name;profilePosition.textContent=member.dataset.position;profileBio.textContent=member.dataset.bio;member.classList.add('active');member.querySelectorAll('.member-trigger').forEach(trigger=>trigger.setAttribute('aria-expanded','true'));const columns=columnCount();const index=members.indexOf(member);const rowEndIndex=Math.min(Math.ceil((index+1)/columns)*columns,members.length)-1;members[rowEndIndex].after(panel);panel.classList.add('active');openMember=member;}
+grid.addEventListener('click',event=>{const trigger=event.target.closest('.member-trigger');if(!trigger)return;const member=trigger.closest('.member');if(openMember===member)closeProfile();else openProfile(member);});
+window.addEventListener('resize',()=>{if(openMember)openProfile(openMember);});
 </script>
 </body>
 </html>

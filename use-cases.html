@@ -31,20 +31,46 @@ section{padding:80px 10%}
 footer{padding:35px 10%;background:#090909;color:#aaa;font-size:14px}
 @media(max-width:950px){nav{align-items:flex-start}.cases-grid{grid-template-columns:repeat(2,1fr)}.case-detail{grid-template-columns:1fr}.case-detail model-viewer{height:460px}.case-text{padding:0}}
 @media(max-width:700px){nav{flex-direction:column;gap:18px}.nav-links a{margin-left:0;margin-right:16px;display:inline-block;margin-bottom:8px}.hero{padding:75px 7%}.hero h1{font-size:42px}section{padding:60px 7%}.cases-grid{grid-template-columns:1fr}.case-detail{padding:24px 18px}.case-detail model-viewer{height:400px}}
+
+/* Shared fixed navigation */
+body{padding-top:82px}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:82px;padding:0;background:#111;color:#fff}
+.nav-inner{width:80%;height:100%;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
+.logo a{color:#fff;text-decoration:none;font-size:30px;font-weight:700;letter-spacing:2px;margin:0}
+.nav-links{display:flex;align-items:center;gap:30px;white-space:nowrap}
+.nav-links a{color:#fff;text-decoration:none;margin:0;font-size:16.5px;font-weight:400;line-height:1}
+.nav-links a:hover{opacity:.72}
+.nav-links a.active{font-size:16.5px;font-weight:800;opacity:1}
+@media(max-width:1050px){
+ body{padding-top:126px}
+ nav{height:126px}
+ .nav-inner{width:86%;flex-direction:column;align-items:flex-start;justify-content:center;gap:12px}
+ .nav-links{width:100%;gap:0;justify-content:space-between;flex-wrap:wrap;row-gap:10px}
+ .nav-links a,.nav-links a.active{font-size:15px}
+}
+@media(max-width:700px){
+ body{padding-top:166px}
+ nav{height:166px}
+ .nav-inner{width:86%}
+ .nav-links{justify-content:flex-start;gap:10px 18px}
+}
+
 </style>
 </head>
 <body>
 <nav>
-  <div class="logo"><a href="index.html">3DXIM</a></div>
-  <div class="nav-links">
-    <a href="index.html#about">About</a>
-    <a href="facilities.html">Facilities</a>
-    <a href="index.html#research">Research</a>
-    <a href="use-cases.html" class="active">Use Cases</a>
-    <a href="team.html">Team</a>
-    <a href="publications.html">Publications</a>
-    <a href="news.html">News</a>
-    <a href="index.html#contact">Contact</a>
+  <div class="nav-inner">
+    <div class="logo"><a href="index.html">3DXIM</a></div>
+    <div class="nav-links">
+      <a href="index.html">About</a>
+      <a href="facilities.html">Facilities</a>
+      <a href="research.html">Research</a>
+      <a href="use-cases.html" class="active">Use Cases</a>
+      <a href="team.html">Team</a>
+      <a href="publications.html">Publications</a>
+      <a href="news.html">News</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
   </div>
 </nav>
 <header class="hero"><h1>Use Cases</h1><p>Explore selected applications of 3D X-ray imaging and analysis.</p></header>

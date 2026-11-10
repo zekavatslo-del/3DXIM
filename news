@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News | 3DXIM</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            padding-top: 82px;
+            font-family: Arial, sans-serif;
+            color: #222;
+            background: white;
+            line-height: 1.6;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            height: 82px;
+            padding: 0;
+            background: #111;
+            color: white;
+        }
+
+        .nav-inner {
+            width: 80%;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo a {
+            color: white;
+            text-decoration: none;
+            font-size: 30px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin: 0;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            white-space: nowrap;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0;
+            font-size: 16.5px;
+            font-weight: 400;
+            line-height: 1;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.72;
+        }
+
+        .nav-links a.active {
+            font-size: 16.5px;
+            font-weight: 800;
+            opacity: 1;
+        }
+
+        .hero {
+            padding: 110px 10%;
+            background: #f0f2f3;
+        }
+
+        .hero h1 {
+            font-size: 58px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 780px;
+            font-size: 20px;
+            color: #666;
+        }
+
+        section {
+            padding: 90px 10%;
+        }
+
+        .news-list {
+            max-width: 1000px;
+        }
+
+        .news-item {
+            padding: 30px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .news-item:first-child {
+            padding-top: 0;
+        }
+
+        .news-date {
+            margin-bottom: 8px;
+            color: #666;
+            font-size: 15px;
+        }
+
+        .news-item h2 {
+            margin-bottom: 12px;
+            font-size: 28px;
+            line-height: 1.25;
+        }
+
+        .news-item p {
+            max-width: 800px;
+            color: #555;
+            font-size: 17px;
+        }
+
+        footer {
+            padding: 35px 10%;
+            background: #090909;
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        @media (max-width: 1050px) {
+            body {
+                padding-top: 126px;
+            }
+
+            nav {
+                height: 126px;
+            }
+
+            .nav-inner {
+                width: 86%;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            .nav-links {
+                width: 100%;
+                gap: 0;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                row-gap: 10px;
+            }
+
+            .nav-links a,
+            .nav-links a.active {
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 700px) {
+            body {
+                padding-top: 166px;
+            }
+
+            nav {
+                height: 166px;
+            }
+
+            .nav-inner {
+                width: 86%;
+            }
+
+            .nav-links {
+                justify-content: flex-start;
+                gap: 10px 18px;
+            }
+
+            .hero {
+                padding: 80px 7%;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            section {
+                padding: 70px 7%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-inner">
+            <div class="logo"><a href="index.html">3DXIM</a></div>
+            <div class="nav-links">
+                <a href="index.html">About</a>
+                <a href="facilities.html">Facilities</a>
+                <a href="research.html">Research</a>
+                <a href="use-cases.html">Use Cases</a>
+                <a href="team.html">Team</a>
+                <a href="publications.html">Publications</a>
+                <a href="news.html" class="active">News</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>News</h1>
+        <p>Updates from the 3DXIM group, including research, publications, projects, and events.</p>
+    </header>
+
+    <section>
+        <div class="news-list">
+            <article class="news-item">
+                <div class="news-date">Date</div>
+                <h2>News title</h2>
+                <p>Add the news description here.</p>
+            </article>
+        </div>
+    </section>
+
+    <footer>
+        3DXIM — Advanced X-ray Imaging
+    </footer>
+</body>
+</html>
